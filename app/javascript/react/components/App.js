@@ -1,12 +1,12 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from "react-router-dom"
-import CoffeesIndexContainer from './CoffeesIndexContainer'
+import Coffeeburst from './Coffeeburst'
 
 export const App = (props) => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path='/coffees' component={CoffeesIndexContainer} />
+        <Route path='/coffees' component={Coffeeburst} />
       </Switch>
     </BrowserRouter>
   )
