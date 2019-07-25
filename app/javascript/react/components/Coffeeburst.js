@@ -50,6 +50,18 @@ function updateData(data, keyPath) {
   return data;
 }
 
+function updateSelection(nodeName, selection) {
+  if (selection.includes(nodeName)) {
+    selection.splice(selection.indexOf(nodeName), 1)
+    console.log(selection)
+    return selection
+  } else {
+    selection.push(nodeName)
+    console.log(selection)
+    return selection
+  }
+}
+
 const decoratedData = updateData(D3FlareData, false);
 
 export default class Coffeeburst extends React.Component {
@@ -57,11 +69,12 @@ export default class Coffeeburst extends React.Component {
     pathValue: false,
     data: decoratedData,
     finalValue: 'SUNBURST',
-    clicked: false
+    clicked: false,
+    selection: []
   };
 
   render() {
-    const {clicked, data, finalValue, pathValue} = this.state;
+    const {clicked, data, finalValue, pathValue, selection} = this.state;
     return (
       <div className="basic-sunburst-example-wrapper">
         <div>
@@ -87,15 +100,17 @@ export default class Coffeeburst extends React.Component {
             });
           }}
           onValueMouseOut={() =>
-            clicked
-              ? () => {}
+            clicked ? () => {}
               : this.setState({
                   pathValue: false,
                   finalValue: false,
                   data: updateData(decoratedData, false)
                 })
           }
-          onValueClick={() => this.setState({clicked: !clicked})}
+          onValueClick={node =>
+            this.setState(
+            {selection: updateSelection(node.name, selection)}
+            )}
           style={{
             stroke: '#ddd',
             strokeOpacity: 0.3,
