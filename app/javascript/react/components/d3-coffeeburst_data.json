@@ -1,250 +1,258 @@
 {
   "children": [{
       "name": "fruit",
-      "hex": "#12939A",
+      "hex": "#FBFF8F",
       "children": [{
           "name": "citrus",
+          "hex": "#FE9AFE",
           "children": [{
               "name": "lemon & lemonade",
-              "hex": "#12939A",
+              "hex": "#F5FE48",
               "value": 7000
             },
             {
               "name": "lime",
-              "hex": "#12939A",
+              "hex": "#D7FE8A",
               "value": 7000
             },
             {
               "name": "grapefruit",
-              "hex": "#12939A",
+              "hex": "#FDFFB6",
               "value": 7000
             },
             {
               "name": "clementine",
-              "hex": "#12939A",
+              "hex": "#FCFD35",
               "value": 7000
             },
             {
               "name": "tangerine",
-              "hex": "#12939A",
+              "hex": "#FFDAC4",
               "value": 7000
             },
             {
               "name": "mandarin orange",
-              "hex": "#12939A",
+              "hex": "#FEB6A6",
               "value": 7000
             },
             {
               "name": "orange",
-              "hex": "#12939A",
+              "hex": "#FB7099",
               "value": 7000
             }
           ]
         },
         {
           "name": "apple/pear",
+          "hex": "#CBFD85",
           "children": [{
               "name": "green apple",
-              "hex": "#12939A",
+              "hex": "#D8FD2B",
               "value": 7000
             },
             {
               "name": "red apple",
-              "hex": "#12939A",
+              "hex": "#FC2861",
               "value": 7000
             }
           ]
         },
         {
           "name": "melon",
+          "hex": "#AEFE3E",
           "children": [{
               "name": "watermelon",
-              "hex": "#12939A",
+              "hex": "#7DD832",
               "value": 7000
             },
             {
               "name": "honeydew",
-              "hex": "#12939A",
+              "hex": "#D4FF31",
               "value": 7000
             },
             {
               "name": "cantaloupe",
-              "hex": "#12939A",
+              "hex": "#F7FB52",
               "value": 7000
             }
           ]
         },
         {
           "name": "grape",
+          "hex": "#732CFB",
           "children": [{
               "name": "white grape",
-              "hex": "#12939A",
+              "hex": "#FBFBC4",
               "value": 7000
             },
             {
               "name": "green grape",
-              "hex": "#12939A",
+              "hex": "#F8F8B5",
               "value": 7000
             },
             {
               "name": "red grape",
-              "hex": "#12939A",
+              "hex": "#E7C5EE",
               "value": 7000
             },
             {
               "name": "concord grape",
-              "hex": "#12939A",
+              "hex": "#C5B9FE",
               "value": 7000
             }
           ]
         },
         {
           "name": "tropical fruit",
+          "hex": "#F7FF52",
           "children": [{
               "name": "lychee",
-              "hex": "#12939A",
+              "hex": "#FEFFEA",
               "value": 7000
             },
             {
               "name": "star fruit",
-              "hex": "#12939A",
+              "hex": "#FBFFA5",
               "value": 7000
             },
             {
               "name": "tamarind",
-              "hex": "#12939A",
+              "hex": "#CDEFF4",
               "value": 7000
             },
             {
               "name": "passion fruit",
-              "hex": "#12939A",
+              "hex": "#F8F9AF",
               "value": 7000
             },
             {
               "name": "pineapple",
-              "hex": "#12939A",
+              "hex": "#FBFC8D",
               "value": 7000
             },
             {
               "name": "mango",
-              "hex": "#12939A",
+              "hex": "#FFDD93",
               "value": 7000
             },
             {
               "name": "papaya",
-              "hex": "#12939A",
+              "hex": "#FEC69D",
               "value": 7000
             },
             {
               "name": "kiwi",
-              "hex": "#12939A",
+              "hex": "#FFFFC6",
               "value": 7000
             },
             {
               "name": "banana",
-              "hex": "#12939A",
+              "hex": "#FBFE6E",
               "value": 7000
             },
             {
               "name": "coconut",
-              "hex": "#12939A",
+              "hex": "#FDFDD9",
               "value": 7000
             }
           ]
         },
         {
           "name": "stone fruit",
+          "hex": "#FEC4A2",
           "children": [{
               "name": "peach",
-              "hex": "#12939A",
+              "hex": "#F88A33",
               "value": 7000
             },
             {
               "name": "nectarine",
-              "hex": "#12939A",
+              "hex": "#FFD057",
               "value": 7000
             },
             {
               "name": "apricot",
-              "hex": "#12939A",
+              "hex": "#F9A147",
               "value": 7000
             },
             {
               "name": "plum",
-              "hex": "#12939A",
+              "hex": "#FE56FE",
               "value": 7000
             },
             {
               "name": "cherry",
-              "hex": "#12939A",
+              "hex": "#FE4C9A",
               "value": 7000
             },
             {
               "name": "black cherry",
-              "hex": "#12939A",
+              "hex": "#981E5F",
               "value": 7000
             }
           ]
         },
         {
           "name": "berry",
+          "hex": "#4F49FE",
           "children": [{
               "name": "cranberry",
-              "hex": "#12939A",
+              "hex": "#C1115A",
               "value": 7000
             },
             {
               "name": "raspberry",
-              "hex": "#12939A",
+              "hex": "#FE29F7",
               "value": 7000
             },
             {
               "name": "strawberry",
-              "hex": "#12939A",
+              "hex": "#CE245F",
               "value": 7000
             },
             {
               "name": "blueberry",
-              "hex": "#12939A",
+              "hex": "#4F83F5",
               "value": 7000
             },
             {
               "name": "red currant",
-              "hex": "#12939A",
+              "hex": "#FD54D2",
               "value": 7000
             },
             {
               "name": "black currant",
-              "hex": "#12939A",
+              "hex": "#6E64B6",
               "value": 7000
             }
           ]
         },
         {
           "name": "dried fruit",
+          "hex": "#6299F6",
           "children": [{
               "name": "golden raisin",
-              "hex": "#12939A",
+              "hex": "#FFE4A1",
               "value": 7000
             },
             {
               "name": "raisin",
-              "hex": "#12939A",
+              "hex": "#6454F1",
               "value": 7000
             },
             {
               "name": "dried fig",
-              "hex": "#12939A",
+              "hex": "#C4C2FA",
               "value": 7000
             },
             {
               "name": "dried dates",
-              "hex": "#12939A",
+              "hex": "#C4C3FE",
               "value": 7000
             },
             {
               "name": "prune",
-              "hex": "#12939A",
+              "hex": "#080CAA",
               "value": 7000
             }
           ]
@@ -253,416 +261,425 @@
     },
     {
       "name": "chocolate",
+      "hex": "#624228",
       "children": [{
           "name": "cacao nibs",
-          "hex": "#12939A",
+          "hex": "#5A3F63",
           "value": 7000
         },
         {
           "name": "dark chocolate",
-          "hex": "#12939A",
+          "hex": "#854040",
           "value": 7000
         },
         {
           "name": "bakers chocolate",
-          "hex": "#12939A",
+          "hex": "#3D1C1D",
           "value": 7000
         },
         {
           "name": "bittersweet chocolate",
-          "hex": "#12939A",
+          "hex": "#8F5A3B",
           "value": 7000
         },
         {
           "name": "cacao powder",
-          "hex": "#12939A",
+          "hex": "#CC8170",
           "value": 7000
         },
         {
           "name": "milk chocolate",
-          "hex": "#12939A",
+          "hex": "#88665E",
           "value": 7000
         }
       ]
     },
     {
       "name": "sweet & sugary",
+      "hex": "#FDFDB3",
       "children": [{
           "name": "vanilla",
-          "hex": "#12939A",
+          "hex": "#FBFEC6",
           "value": 7000
         },
         {
           "name": "nougat",
-          "hex": "#12939A",
+          "hex": "#F8FBC1",
           "value": 7000
         },
         {
           "name": "honey",
-          "hex": "#12939A",
+          "hex": "#F5D230",
           "value": 7000
         },
         {
           "name": "butter",
-          "hex": "#12939A",
+          "hex": "#FCFCC3",
           "value": 7000
         },
         {
           "name": "cream",
-          "hex": "#12939A",
+          "hex": "#FCFDE8",
           "value": 7000
         },
         {
           "name": "marshmellow",
-          "hex": "#12939A",
+          "hex": "#F4F4D0",
           "value": 7000
         },
         {
           "name": "sugar cane",
-          "hex": "#12939A",
+          "hex": "#FCFCD5",
           "value": 7000
         },
         {
           "name": "brown sugar",
-          "hex": "#12939A",
+          "hex": "#FABC95",
           "value": 7000
         },
         {
           "name": "caramel",
-          "hex": "#12939A",
+          "hex": "#FF8A37",
           "value": 7000
         },
         {
           "name": "maple syrup",
-          "hex": "#12939A",
+          "hex": "#EA8B54",
           "value": 7000
         },
         {
           "name": "molasses",
-          "hex": "#12939A",
+          "hex": "#8E7466",
           "value": 7000
         },
         {
           "name": "cola",
-          "hex": "#12939A",
+          "hex": "#806B62",
           "value": 7000
         }
       ]
     },
     {
       "name": "nut",
+      "hex": "#FFC77D",
       "children": [{
           "name": "walnut",
-          "hex": "#12939A",
+          "hex": "#B38B6A",
           "value": 7000
         },
         {
           "name": "peanut",
-          "hex": "#12939A",
+          "hex": "#F2E6A9",
           "value": 7000
         },
         {
           "name": "cashew",
-          "hex": "#12939A",
+          "hex": "#F2E6A9",
           "value": 7000
         },
         {
           "name": "pecan",
-          "hex": "#12939A",
+          "hex": "#FCFD91",
           "value": 7000
         },
         {
           "name": "hazelnut",
-          "hex": "#12939A",
+          "hex": "#FBCB63",
           "value": 7000
         },
         {
           "name": "almond",
-          "hex": "#12939A",
+          "hex": "#FCFFBB",
           "value": 7000
         }
       ]
     },
     {
       "name": "grain & cereal",
+      "hex": "#F1EAB4",
       "children": [{
           "name": "sweet bread pastry",
-          "hex": "#12939A",
+          "hex": "#F8DB8A",
           "value": 7000
         },
         {
           "name": "granola",
-          "hex": "#12939A",
+          "hex": "#E6AF77",
           "value": 7000
         },
         {
           "name": "graham cracker",
-          "hex": "#12939A",
+          "hex": "#E3AC48",
           "value": 7000
         },
         {
           "name": "rye",
-          "hex": "#12939A",
+          "hex": "#FDD19E",
           "value": 7000
         },
         {
           "name": "wheat",
-          "hex": "#12939A",
+          "hex": "#E9E2B2",
           "value": 7000
         },
         {
           "name": "barley",
-          "hex": "#12939A",
+          "hex": "#FBBF92",
           "value": 7000
         },
         {
           "name": "fresh bread",
-          "hex": "#12939A",
+          "hex": "#F3E193",
           "value": 7000
         }
       ]
     },
     {
       "name": "roast",
+      "hex": "#B0ACAB",
       "children": [{
           "name": "toast",
-          "hex": "#12939A",
+          "hex": "#E4B443",
           "value": 7000
         },
         {
           "name": "burnt sugar",
-          "hex": "#12939A",
+          "hex": "#C5B996",
           "value": 7000
         },
         {
           "name": "smokey",
-          "hex": "#12939A",
+          "hex": "#B9C99B",
           "value": 7000
         },
         {
           "name": "carbon",
-          "hex": "#12939A",
+          "hex": "#182A31",
           "value": 7000
         }
       ]
     },
     {
       "name": "spice",
+      "hex": "#FF86B2",
       "children": [{
           "name": "black pepper",
-          "hex": "#12939A",
+          "hex": "#D8E7AE",
           "value": 7000
         },
         {
           "name": "white pepper",
-          "hex": "#12939A",
+          "hex": "#D9DEA6",
           "value": 7000
         },
         {
           "name": "cinnamon",
-          "hex": "#12939A",
+          "hex": "#EC7D52",
           "value": 7000
         },
         {
           "name": "coriander",
-          "hex": "#12939A",
+          "hex": "#F7FFB4",
           "value": 7000
         },
         {
           "name": "ginger",
-          "hex": "#12939A",
+          "hex": "#FFCD72",
           "value": 7000
         },
         {
           "name": "nutmeg",
-          "hex": "#12939A",
+          "hex": "#F9DF92",
           "value": 7000
         },
         {
           "name": "curry",
-          "hex": "#12939A",
+          "hex": "#FFDDBA",
           "value": 7000
         },
         {
           "name": "licorice-anice",
-          "hex": "#12939A",
+          "hex": "#181519",
           "value": 7000
         },
         {
           "name": "clove",
-          "hex": "#12939A",
+          "hex": "#93B693",
           "value": 7000
         }
       ]
     },
     {
       "name": "savory",
+      "hex": "FB8090",
       "children": [{
           "name": "leathery",
-          "hex": "#12939A",
+          "hex": "#E88B6A",
           "value": 7000
         },
         {
           "name": "meat-like",
-          "hex": "#12939A",
+          "hex": "#9A3D4A",
           "value": 7000
         },
         {
           "name": "soy sauce",
-          "hex": "#12939A",
+          "hex": "#896761",
           "value": 7000
         },
         {
           "name": "sundried tomato",
-          "hex": "#12939A",
+          "hex": "#FA4195",
           "value": 7000
         },
         {
           "name": "tomato",
-          "hex": "#12939A",
+          "hex": "#FD1B29",
           "value": 7000
         }
       ]
     },
     {
       "name": "vegetal earthy herb",
+      "hex": "#D5F856",
       "children": [{
           "name": "soil",
-          "hex": "#12939A",
+          "hex": "#0C0E0F",
           "value": 7000
         },
         {
           "name": "fresh wood",
-          "hex": "#12939A",
+          "hex": "#F9BB6E",
           "value": 7000
         },
         {
           "name": "cedar",
-          "hex": "#12939A",
+          "hex": "#DE737F",
           "value": 7000
         },
         {
           "name": "tobacco",
-          "hex": "#12939A",
+          "hex": "#F6C191",
           "value": 7000
         },
         {
           "name": "hay/straw",
-          "hex": "#12939A",
+          "hex": "#F7E349",
           "value": 7000
         },
         {
           "name": "leafy greens",
-          "hex": "#12939A",
+          "hex": "#4EE94B",
           "value": 7000
         },
         {
           "name": "olive",
-          "hex": "#12939A",
+          "hex": "#AEE757",
           "value": 7000
         },
         {
           "name": "green pepper",
-          "hex": "#12939A",
+          "hex": "#AAFB89",
           "value": 7000
         },
         {
           "name": "squash",
-          "hex": "#12939A",
+          "hex": "#F2FD43",
           "value": 7000
         },
         {
           "name": "mushroom",
-          "hex": "#12939A",
+          "hex": "#E1BB38",
           "value": 7000
         },
         {
           "name": "sweet pea",
-          "hex": "#12939A",
+          "hex": "#D9FDA3",
           "value": 7000
         },
         {
           "name": "snow pea",
-          "hex": "#12939A",
+          "hex": "#DDFF9E",
           "value": 7000
         },
         {
           "name": "grassy",
-          "hex": "#12939A",
+          "hex": "#A2FC64",
           "value": 7000
         },
         {
           "name": "dill",
-          "hex": "#12939A",
+          "hex": "#CAF88C",
           "value": 7000
         },
         {
           "name": "sage",
-          "hex": "#12939A",
+          "hex": "#C2ED7D",
           "value": 7000
         },
         {
           "name": "mint",
-          "hex": "#12939A",
+          "hex": "#DAFE7D",
           "value": 7000
         },
         {
           "name": "green tea",
-          "hex": "#12939A",
+          "hex": "#C2DE32",
           "value": 7000
         },
         {
           "name": "black tea",
-          "hex": "#12939A",
+          "hex": "#B3A6B0",
           "value": 7000
         },
         {
           "name": "hops",
-          "hex": "#12939A",
+          "hex": "#FFB952",
           "value": 7000
         },
         {
           "name": "bergamot",
-          "hex": "#12939A",
+          "hex": "#FEFFF7",
           "value": 7000
         }
       ]
     },
     {
       "name": "floral",
+      "hex": "FCFF98",
       "children": [{
           "name": "hibiscus",
-          "hex": "#12939A",
+          "hex": "#FEB8FC",
           "value": 7000
         },
         {
           "name": "rose hips",
-          "hex": "#12939A",
+          "hex": "#FFFAFF",
           "value": 7000
         },
         {
           "name": "lavender",
-          "hex": "#12939A",
+          "hex": "#CFC7EA",
           "value": 7000
         },
         {
           "name": "magnolia",
-          "hex": "#12939A",
+          "hex": "#FEFFDD",
           "value": 7000
         },
         {
           "name": "jasmine honeysuckle",
-          "hex": "#12939A",
+          "hex": "#FEFFEF",
           "value": 7000
         },
         {
           "name": "orange blossom",
-          "hex": "#12939A",
+          "hex": "#FAFDA0",
           "value": 7000
         },
         {
           "name": "lemongrass",
-          "hex": "#12939A",
+          "hex": "#FEFFAA",
           "value": 7000
         }
       ]
