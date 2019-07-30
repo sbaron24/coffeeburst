@@ -3,10 +3,10 @@ import React from 'react';
 import {EXTENDED_DISCRETE_COLOR_RANGE} from './theme';
 import {Sunburst, LabelSeries} from 'react-vis';
 
-import D3FlareData from './d3-coffeeburst_data.json';
+import importedData from './d3-coffeeburst_data.json';
 
 const LABEL_STYLE = {
-  fontSize: '8px',
+  fontSize: '12px',
   textAnchor: 'middle'
 };
 
@@ -36,50 +36,28 @@ function updateData(data, keyPath) {
   if (data.children) {
     data.children.map(child => updateData(child, keyPath));
   }
-  // add a fill to all the uncolored cells
-  if (!data.hex) {
-    data.style = {
-      fill: EXTENDED_DISCRETE_COLOR_RANGE[5]
-    };
-  }
+
   data.style = {
-    ...data.style,
     fillOpacity: keyPath && !keyPath[data.name] ? 0.2 : 1
   };
 
   return data;
 }
 
-function updateSelection(nodeName, selection) {
-  if (selection.includes(nodeName)) {
-    selection.splice(selection.indexOf(nodeName), 1)
-    console.log(selection)
-    return selection
-  } else {
-    selection.push(nodeName)
-    console.log(selection)
-    return selection
-  }
-}
-
-const decoratedData = updateData(D3FlareData, false);
+const decoratedData = updateData(importedData, false);
 
 export default class Coffeeburst extends React.Component {
   state = {
     pathValue: false,
     data: decoratedData,
     finalValue: 'SUNBURST',
-    clicked: false,
-    selection: []
+    selected: {}
   };
 
   render() {
-    const {clicked, data, finalValue, pathValue, selection} = this.state;
+    const {clicked, data, finalValue, pathValue, selected} = this.state;
     return (
       <div className="basic-sunburst-example-wrapper">
-        <div>
-          {clicked ? 'click to unlock selection' : 'click to lock selection'}
-        </div>
         <Sunburst
           animation
           className="basic-sunburst-example"
@@ -107,10 +85,19 @@ export default class Coffeeburst extends React.Component {
                   data: updateData(decoratedData, false)
                 })
           }
-          onValueClick={node =>
+          onValueClick={node => {
+            if (selected[node.name]) {
+              delete selected[node.name]
+            } else {
+              selected[node.name] = node.hex
+            }
+
             this.setState(
-            {selection: updateSelection(node.name, selection)}
-            )}
+              {selected: selected}
+              )
+            }
+          }
+
           style={{
             stroke: '#ddd',
             strokeOpacity: 0.3,
@@ -129,7 +116,6 @@ export default class Coffeeburst extends React.Component {
             />
           )}
         </Sunburst>
-        <div className="basic-sunburst-example-path-name">{pathValue}</div>
       </div>
     );
   }
