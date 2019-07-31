@@ -16,6 +16,10 @@ class CoffeesController < ApplicationController
     end
   end
 
+  def show
+    @coffee = Coffee.find(params[:id])
+  end
+
   def coffee_params
     params.require(:coffee).permit(
       :name,
