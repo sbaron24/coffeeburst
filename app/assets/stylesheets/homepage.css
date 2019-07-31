@@ -1,0 +1,45 @@
+
+.search-container {
+  max-width: 90%;
+  margin: auto;
+  margin-top: 3rem;
+  padding: 2rem;
+}
+
+.search-bar {
+  margin-bottom: 1rem;
+}
+
+.results-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.coffee-tile{
+  background-color: #eeeeee;
+  border-color: grey;
+  border-width: 1px;
+  border-style: solid;
+  padding: 3px;
+  margin: 8px;
+  padding: 15px;
+}
+
+.coffee-tile:nth-of-type(3){
+    flex: 2;
+}
+
+.coffee-tile p {
+  margin: 0px;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  background-color: #d3c2fa;
+}
+
+.details {
+  display: inline;
+  font-size: 10px;
+}
