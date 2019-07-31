@@ -1,0 +1,65 @@
+
+
+<%= form_for(@coffee) do |f| %>
+
+  <div class="form-section">
+    <div class='row'>
+      <h3>What are you drinking?</h3>
+      <div class='required-section large-6 column panel'>
+        <div class="field">
+          <%= f.text_field :name, placeholder: "Coffee name" %>
+        </div>
+        <div class="field">
+          <%= f.text_field :roaster, placeholder: "Roaster name" %>
+        </div>
+
+        <div class="field">
+          <%= f.text_field :country, placeholder: "Country of origin" %>
+        </div>
+
+        <div class="field">
+          <%= f.text_field :process, placeholder: "Washed, natural, semi-washed, etc" %>
+        </div>
+
+        <p>
+          **these fields are required**
+          </p>
+
+        <div class="actions">
+          <%= f.submit "Add Coffee", class:"button" %>
+        </div>
+      </div>
+
+      <div class='optional-section large-6 column end'>
+
+        <div class="field">
+          <%= f.text_field :coffee_type, placeholder: "Single origin, blend, or espresso" %>
+        </div>
+
+        <div class="field">
+          <%= f.text_field :region, placeholder: "Region" %>
+        </div>
+
+        <div class="field">
+          <%= f.text_field :altitude, placeholder: "Altitude" %>
+        </div>
+
+        <div class="field">
+          <%= f.text_field :producer, placeholder: "Producer or farm" %>
+        </div>
+
+        <div class="field">
+          <%= f.text_field :variety, placeholder: "Variety" %>
+        </div>
+
+        <div class="field">
+          <%= f.radio_button :organic, value: true %>
+          <%= f.label :organic, "Yes organic" %>
+          <%= f.radio_button :organic, value: false %>
+          <%= f.label :organic, "No, not organic" %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<% end %>
