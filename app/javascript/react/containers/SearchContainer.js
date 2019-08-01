@@ -27,7 +27,6 @@ class SearchContainer extends Component {
     })
   }
 
-
   render() {
     return(
       <div className='search-container'>

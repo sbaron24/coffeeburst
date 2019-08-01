@@ -7,12 +7,11 @@ class Api::V1::CoffeesController < ApplicationController
   end
 
   private
-  
+
   def parse_search
     query_array = params[:search_string].split(/\W+/)
     query_array
   end
-
 
   def intersection_search(search_word_array)
     coffees = Coffee.all()
