@@ -9,8 +9,9 @@ const CoffeeTile = (props) => {
       </div>
 
       <div className='details'>
-        <p>{props.name} {props.roaster}</p>
-        <p><strong>{props.country}</strong></p>
+        <h6>{props.name}</h6>
+        <p>{props.roaster}</p>
+        <p>{props.country}</p>
         <p className='roast'>{props.roast}</p>
       </div>
 
