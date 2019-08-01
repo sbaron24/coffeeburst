@@ -5,7 +5,6 @@ class SearchResultsContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedId: ""
     }
   }
 
@@ -14,6 +13,7 @@ class SearchResultsContainer extends Component {
     let coffeeTiles = this.props.coffees.map(coffee => {
       return(
         <CoffeeTile
+          key={coffee.id}
           name={coffee.name}
           roaster={coffee.roaster}
           country={coffee.country}

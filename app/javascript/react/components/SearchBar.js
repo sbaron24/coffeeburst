@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 class SearchBar extends Component {
   constructor(props) {
     super(props);
+    this.timer = null
     this.state = {
       searchString: ''
     }
@@ -14,10 +15,17 @@ class SearchBar extends Component {
     handleChange(event) {
       const newSearchString = event.target.value
       this.setState({ searchString: newSearchString })
+      clearTimeout(this.timer)
+      this.timer = setTimeout(
+        function() {
+          this.handleSubmit()
+        }
+        .bind(this),
+        250
+      )
     }
 
-    handleSubmit(event) {
-      event.preventDefault()
+    handleSubmit() {
       let payload = this.state.searchString
       this.props.handleFetch(payload);
     }
@@ -25,7 +33,7 @@ class SearchBar extends Component {
   render() {
     return(
       <div className='search-bar'>
-        <form onSubmit={this.handleSubmit}>
+        <form>
         <label>What are you drinking?</label>
           <input
             placeholder="Enter a coffee, roaster, country of origin, or roast level"
@@ -34,8 +42,6 @@ class SearchBar extends Component {
             value={this.state.searchString}
             onChange={this.handleChange}
           />
-
-          <input type='submit' value='Submit' />
         </form>
       </div>
     )
