@@ -43,6 +43,7 @@ class SearchBar extends Component {
             onChange={this.handleChange}
           />
         </form>
+        <a href='coffees/new'>Add a coffee</a>
       </div>
     )
   }
