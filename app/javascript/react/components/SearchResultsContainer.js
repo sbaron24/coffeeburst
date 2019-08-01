@@ -13,6 +13,7 @@ class SearchResultsContainer extends Component {
       return(
         <CoffeeTile
           key={coffee.id}
+          id={coffee.id}
           name={coffee.name}
           roaster={coffee.roaster}
           country={coffee.country}
