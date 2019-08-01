@@ -8,7 +8,6 @@ class SearchResultsContainer extends Component {
     }
   }
 
-
   render() {
     let coffeeTiles = this.props.coffees.map(coffee => {
       return(
@@ -21,6 +20,7 @@ class SearchResultsContainer extends Component {
         />
       )
     })
+
     return(
       <div className='results-container'>
         {coffeeTiles}
