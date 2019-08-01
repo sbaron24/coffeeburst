@@ -1,0 +1,60 @@
+
+.search-container {
+  max-width: 90%;
+  margin: auto;
+  margin-top: 3rem;
+  padding: 2rem;
+}
+
+.search-bar {
+  margin-bottom: 1rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.results-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin: auto;
+}
+
+.coffee-tile {
+  background-color: #eeeeee;
+  border-color: grey;
+  border-width: 1px;
+  border-style: solid;
+  padding: 3px;
+  margin: 8px;
+  padding: 15px;
+  width: 150px;
+  text-align: center;
+}
+
+.coffee-tile h6 {
+  margin: 0px;
+  font-family: cursive;
+}
+
+.coffee-tile p {
+  margin: 0px;
+  font-size: 12px;
+}
+
+.coffee-tile .roast {
+  font-size: 10px;
+  color: grey;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  background-color: #d3c2fa;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.details {
+  display: inline;
+  font-size: 10px;
+}

@@ -26,6 +26,7 @@ class CoffeesController < ApplicationController
       :roaster,
       :country,
       :process,
+      :roast,
       :coffee_type,
       :region,
       :altitude,
