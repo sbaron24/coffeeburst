@@ -6,7 +6,7 @@ class SearchContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchResults: []
+      coffees: []
     }
     this.fetchResults = this.fetchResults.bind(this)
   }
@@ -23,7 +23,7 @@ class SearchContainer extends Component {
     })
     .then(response => response.json())
     .then(results => {
-      this.setState({ searchResults: results })
+      this.setState({ coffees: results.coffees })
     })
   }
 
@@ -31,7 +31,7 @@ class SearchContainer extends Component {
     return(
       <div className='search-container'>
         <SearchBar handleFetch={this.fetchResults} />
-        <SearchResultsContainer coffees={this.state.searchResults} />
+        <SearchResultsContainer coffees={this.state.coffees} />
       </div>
     )
   }

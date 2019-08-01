@@ -2,8 +2,8 @@ class Api::V1::CoffeesController < ApplicationController
   protect_from_forgery unless: -> { request.format.json? }
 
   def search
-    @coffees = intersection_search(parse_search)
-    render json: @coffees
+    coffees = intersection_search(parse_search)
+    render json: {coffees: serialize_coffees(coffees)}
   end
 
   private
@@ -28,5 +28,9 @@ class Api::V1::CoffeesController < ApplicationController
       )
     end
     coffees
+  end
+
+  def serialize_coffees(coffees)
+    ActiveModel::Serializer::CollectionSerializer.new(coffees, each_serializer: CoffeeSerializer)
   end
 end
