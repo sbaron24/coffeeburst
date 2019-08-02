@@ -4,5 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :coffees
+  has_many :profiles
+  has_many :coffees, through: :profiles
+  has_many :added_coffees, class_name: 'Coffee', foreign_key: 'creator_id'
 end

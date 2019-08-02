@@ -5,5 +5,7 @@ class Coffee < ApplicationRecord
   validates :process, presence: true
   validates :roast, presence: true
 
-  belongs_to :user
+  has_many :profiles
+  has_many :users, through: :profiles 
+  belongs_to :creator, class_name: 'User'
 end

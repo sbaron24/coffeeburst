@@ -22,7 +22,7 @@ Coffee.create(
   altitude: "1600-2200",
   variety: "Caturra, Castillo, Colombia",
   organic: false,
-  user: sean
+  creator: sean
 )
 
 Coffee.create(
@@ -37,7 +37,7 @@ Coffee.create(
   producer: "El Desarollo Growers Association",
   variety: "Bourbon, Caturra, Castillo, Colombia",
   organic: false,
-  user: sean
+  creator: sean
 )
 
 Coffee.create(
@@ -48,7 +48,7 @@ Coffee.create(
   roast: "Light",
   coffee_type: "Blend",
   organic: true,
-  user: sean
+  creator: sean
 )
 
 Coffee.create(
@@ -63,7 +63,7 @@ Coffee.create(
   producer: "Sombezi",
   variety: "Bourbon",
   organic: false,
-  user: sean
+  creator: sean
 )
 
 Coffee.create(
@@ -74,5 +74,16 @@ Coffee.create(
   coffee_type: "Espresso",
   region: "Songwe, Mbozi",
   roast: "Medium",
-  user: sean
+  creator: sean
+)
+
+Coffee.create(
+  name: "Brandywine Coffee Roasters",
+  roaster: "Ethiopia Limu Lemma Niguisse Natural",
+  country: "Ethiopia",
+  process: "Full natural",
+  coffee_type: "Single origin",
+  region: "Limu",
+  roast: "Light",
+  creator: sean
 )
