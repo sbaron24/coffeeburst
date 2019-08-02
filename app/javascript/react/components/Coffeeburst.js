@@ -7,11 +7,6 @@ const LABEL_STYLE = {
   textAnchor: 'middle'
 };
 
-/**
- * Recursively work backwards from highlighted node to find path of valud nodes
- * @param {Object} node - the current node being considered
- * @returns {Array} an array of strings describing the key route to the current node
- */
 function getKeyPath(node) {
   if (!node.parent) {
     return ['root'];
@@ -22,13 +17,6 @@ function getKeyPath(node) {
   );
 }
 
-/**
- * Recursively modify data depending on whether or not each cell has been selected by the hover/highlight
- * @param {Object} data - the current node being considered
- * @param {Object|Boolean} keyPath - a map of keys that are in the highlight path
- * if this is false then all nodes are marked as selected
- * @returns {Object} Updated tree structure
- */
 function updateData(data, keyPath) {
   if (data.children) {
     data.children.map(child => updateData(child, keyPath));
@@ -55,7 +43,7 @@ export default class Coffeeburst extends React.Component {
     function updateSelection(selected, handleFlavors){
       handleFlavors(selected)
     }
-    const {clicked, data, finalValue, pathValue, selected} = this.state;
+    const {data, finalValue, selected} = this.state;
     return (
       <div className="coffeeburst">
         <Sunburst
@@ -63,9 +51,6 @@ export default class Coffeeburst extends React.Component {
           className="basic-sunburst-example"
           hideRootNode
           onValueMouseOver={node => {
-            if (clicked) {
-              return;
-            }
             const path = getKeyPath(node).reverse();
             const pathAsMap = path.reduce((res, row) => {
               res[row] = true;
@@ -78,12 +63,11 @@ export default class Coffeeburst extends React.Component {
             });
           }}
           onValueMouseOut={() =>
-            clicked ? () => {}
-              : this.setState({
-                  pathValue: false,
-                  finalValue: false,
-                  data: updateData(decoratedData, false)
-                })
+            this.setState({
+              pathValue: false,
+              finalValue: false,
+              data: updateData(decoratedData, false)
+            })
           }
           onValueClick={node => {
             let selected = { [node.name]: node.hex }
