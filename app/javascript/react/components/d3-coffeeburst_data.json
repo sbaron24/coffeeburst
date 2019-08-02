@@ -1,0 +1,688 @@
+{
+  "children": [{
+      "name": "fruit",
+      "hex": "#FBFF8F",
+      "children": [{
+          "name": "citrus",
+          "hex": "#FE9AFE",
+          "children": [{
+              "name": "lemon & lemonade",
+              "hex": "#F5FE48",
+              "value": 7000
+            },
+            {
+              "name": "lime",
+              "hex": "#D7FE8A",
+              "value": 7000
+            },
+            {
+              "name": "grapefruit",
+              "hex": "#FDFFB6",
+              "value": 7000
+            },
+            {
+              "name": "clementine",
+              "hex": "#FCFD35",
+              "value": 7000
+            },
+            {
+              "name": "tangerine",
+              "hex": "#FFDAC4",
+              "value": 7000
+            },
+            {
+              "name": "mandarin orange",
+              "hex": "#FEB6A6",
+              "value": 7000
+            },
+            {
+              "name": "orange",
+              "hex": "#FB7099",
+              "value": 7000
+            }
+          ]
+        },
+        {
+          "name": "apple/pear",
+          "hex": "#CBFD85",
+          "children": [{
+              "name": "green apple",
+              "hex": "#D8FD2B",
+              "value": 7000
+            },
+            {
+              "name": "red apple",
+              "hex": "#FC2861",
+              "value": 7000
+            }
+          ]
+        },
+        {
+          "name": "melon",
+          "hex": "#AEFE3E",
+          "children": [{
+              "name": "watermelon",
+              "hex": "#7DD832",
+              "value": 7000
+            },
+            {
+              "name": "honeydew",
+              "hex": "#D4FF31",
+              "value": 7000
+            },
+            {
+              "name": "cantaloupe",
+              "hex": "#F7FB52",
+              "value": 7000
+            }
+          ]
+        },
+        {
+          "name": "grape",
+          "hex": "#732CFB",
+          "children": [{
+              "name": "white grape",
+              "hex": "#FBFBC4",
+              "value": 7000
+            },
+            {
+              "name": "green grape",
+              "hex": "#F8F8B5",
+              "value": 7000
+            },
+            {
+              "name": "red grape",
+              "hex": "#E7C5EE",
+              "value": 7000
+            },
+            {
+              "name": "concord grape",
+              "hex": "#C5B9FE",
+              "value": 7000
+            }
+          ]
+        },
+        {
+          "name": "tropical fruit",
+          "hex": "#F7FF52",
+          "children": [{
+              "name": "lychee",
+              "hex": "#FEFFEA",
+              "value": 7000
+            },
+            {
+              "name": "star fruit",
+              "hex": "#FBFFA5",
+              "value": 7000
+            },
+            {
+              "name": "tamarind",
+              "hex": "#CDEFF4",
+              "value": 7000
+            },
+            {
+              "name": "passion fruit",
+              "hex": "#F8F9AF",
+              "value": 7000
+            },
+            {
+              "name": "pineapple",
+              "hex": "#FBFC8D",
+              "value": 7000
+            },
+            {
+              "name": "mango",
+              "hex": "#FFDD93",
+              "value": 7000
+            },
+            {
+              "name": "papaya",
+              "hex": "#FEC69D",
+              "value": 7000
+            },
+            {
+              "name": "kiwi",
+              "hex": "#FFFFC6",
+              "value": 7000
+            },
+            {
+              "name": "banana",
+              "hex": "#FBFE6E",
+              "value": 7000
+            },
+            {
+              "name": "coconut",
+              "hex": "#FDFDD9",
+              "value": 7000
+            }
+          ]
+        },
+        {
+          "name": "stone fruit",
+          "hex": "#FEC4A2",
+          "children": [{
+              "name": "peach",
+              "hex": "#F88A33",
+              "value": 7000
+            },
+            {
+              "name": "nectarine",
+              "hex": "#FFD057",
+              "value": 7000
+            },
+            {
+              "name": "apricot",
+              "hex": "#F9A147",
+              "value": 7000
+            },
+            {
+              "name": "plum",
+              "hex": "#FE56FE",
+              "value": 7000
+            },
+            {
+              "name": "cherry",
+              "hex": "#FE4C9A",
+              "value": 7000
+            },
+            {
+              "name": "black cherry",
+              "hex": "#981E5F",
+              "value": 7000
+            }
+          ]
+        },
+        {
+          "name": "berry",
+          "hex": "#4F49FE",
+          "children": [{
+              "name": "cranberry",
+              "hex": "#C1115A",
+              "value": 7000
+            },
+            {
+              "name": "raspberry",
+              "hex": "#FE29F7",
+              "value": 7000
+            },
+            {
+              "name": "strawberry",
+              "hex": "#CE245F",
+              "value": 7000
+            },
+            {
+              "name": "blueberry",
+              "hex": "#4F83F5",
+              "value": 7000
+            },
+            {
+              "name": "red currant",
+              "hex": "#FD54D2",
+              "value": 7000
+            },
+            {
+              "name": "black currant",
+              "hex": "#6E64B6",
+              "value": 7000
+            }
+          ]
+        },
+        {
+          "name": "dried fruit",
+          "hex": "#6299F6",
+          "children": [{
+              "name": "golden raisin",
+              "hex": "#FFE4A1",
+              "value": 7000
+            },
+            {
+              "name": "raisin",
+              "hex": "#6454F1",
+              "value": 7000
+            },
+            {
+              "name": "dried fig",
+              "hex": "#C4C2FA",
+              "value": 7000
+            },
+            {
+              "name": "dried dates",
+              "hex": "#C4C3FE",
+              "value": 7000
+            },
+            {
+              "name": "prune",
+              "hex": "#080CAA",
+              "value": 7000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "chocolate",
+      "hex": "#624228",
+      "children": [{
+          "name": "cacao nibs",
+          "hex": "#5A3F63",
+          "value": 7000
+        },
+        {
+          "name": "dark chocolate",
+          "hex": "#854040",
+          "value": 7000
+        },
+        {
+          "name": "bakers chocolate",
+          "hex": "#3D1C1D",
+          "value": 7000
+        },
+        {
+          "name": "bittersweet chocolate",
+          "hex": "#8F5A3B",
+          "value": 7000
+        },
+        {
+          "name": "cacao powder",
+          "hex": "#CC8170",
+          "value": 7000
+        },
+        {
+          "name": "milk chocolate",
+          "hex": "#88665E",
+          "value": 7000
+        }
+      ]
+    },
+    {
+      "name": "sweet & sugary",
+      "hex": "#FDFDB3",
+      "children": [{
+          "name": "vanilla",
+          "hex": "#FBFEC6",
+          "value": 7000
+        },
+        {
+          "name": "nougat",
+          "hex": "#F8FBC1",
+          "value": 7000
+        },
+        {
+          "name": "honey",
+          "hex": "#F5D230",
+          "value": 7000
+        },
+        {
+          "name": "butter",
+          "hex": "#FCFCC3",
+          "value": 7000
+        },
+        {
+          "name": "cream",
+          "hex": "#FCFDE8",
+          "value": 7000
+        },
+        {
+          "name": "marshmellow",
+          "hex": "#F4F4D0",
+          "value": 7000
+        },
+        {
+          "name": "sugar cane",
+          "hex": "#FCFCD5",
+          "value": 7000
+        },
+        {
+          "name": "brown sugar",
+          "hex": "#FABC95",
+          "value": 7000
+        },
+        {
+          "name": "caramel",
+          "hex": "#FF8A37",
+          "value": 7000
+        },
+        {
+          "name": "maple syrup",
+          "hex": "#EA8B54",
+          "value": 7000
+        },
+        {
+          "name": "molasses",
+          "hex": "#8E7466",
+          "value": 7000
+        },
+        {
+          "name": "cola",
+          "hex": "#806B62",
+          "value": 7000
+        }
+      ]
+    },
+    {
+      "name": "nut",
+      "hex": "#FFC77D",
+      "children": [{
+          "name": "walnut",
+          "hex": "#B38B6A",
+          "value": 7000
+        },
+        {
+          "name": "peanut",
+          "hex": "#F2E6A9",
+          "value": 7000
+        },
+        {
+          "name": "cashew",
+          "hex": "#F2E6A9",
+          "value": 7000
+        },
+        {
+          "name": "pecan",
+          "hex": "#FCFD91",
+          "value": 7000
+        },
+        {
+          "name": "hazelnut",
+          "hex": "#FBCB63",
+          "value": 7000
+        },
+        {
+          "name": "almond",
+          "hex": "#FCFFBB",
+          "value": 7000
+        }
+      ]
+    },
+    {
+      "name": "grain & cereal",
+      "hex": "#F1EAB4",
+      "children": [{
+          "name": "sweet bread pastry",
+          "hex": "#F8DB8A",
+          "value": 7000
+        },
+        {
+          "name": "granola",
+          "hex": "#E6AF77",
+          "value": 7000
+        },
+        {
+          "name": "graham cracker",
+          "hex": "#E3AC48",
+          "value": 7000
+        },
+        {
+          "name": "rye",
+          "hex": "#FDD19E",
+          "value": 7000
+        },
+        {
+          "name": "wheat",
+          "hex": "#E9E2B2",
+          "value": 7000
+        },
+        {
+          "name": "barley",
+          "hex": "#FBBF92",
+          "value": 7000
+        },
+        {
+          "name": "fresh bread",
+          "hex": "#F3E193",
+          "value": 7000
+        }
+      ]
+    },
+    {
+      "name": "roast",
+      "hex": "#B0ACAB",
+      "children": [{
+          "name": "toast",
+          "hex": "#E4B443",
+          "value": 7000
+        },
+        {
+          "name": "burnt sugar",
+          "hex": "#C5B996",
+          "value": 7000
+        },
+        {
+          "name": "smokey",
+          "hex": "#B9C99B",
+          "value": 7000
+        },
+        {
+          "name": "carbon",
+          "hex": "#182A31",
+          "value": 7000
+        }
+      ]
+    },
+    {
+      "name": "spice",
+      "hex": "#FF86B2",
+      "children": [{
+          "name": "black pepper",
+          "hex": "#D8E7AE",
+          "value": 7000
+        },
+        {
+          "name": "white pepper",
+          "hex": "#D9DEA6",
+          "value": 7000
+        },
+        {
+          "name": "cinnamon",
+          "hex": "#EC7D52",
+          "value": 7000
+        },
+        {
+          "name": "coriander",
+          "hex": "#F7FFB4",
+          "value": 7000
+        },
+        {
+          "name": "ginger",
+          "hex": "#FFCD72",
+          "value": 7000
+        },
+        {
+          "name": "nutmeg",
+          "hex": "#F9DF92",
+          "value": 7000
+        },
+        {
+          "name": "curry",
+          "hex": "#FFDDBA",
+          "value": 7000
+        },
+        {
+          "name": "licorice-anice",
+          "hex": "#181519",
+          "value": 7000
+        },
+        {
+          "name": "clove",
+          "hex": "#93B693",
+          "value": 7000
+        }
+      ]
+    },
+    {
+      "name": "savory",
+      "hex": "FB8090",
+      "children": [{
+          "name": "leathery",
+          "hex": "#E88B6A",
+          "value": 7000
+        },
+        {
+          "name": "meat-like",
+          "hex": "#9A3D4A",
+          "value": 7000
+        },
+        {
+          "name": "soy sauce",
+          "hex": "#896761",
+          "value": 7000
+        },
+        {
+          "name": "sundried tomato",
+          "hex": "#FA4195",
+          "value": 7000
+        },
+        {
+          "name": "tomato",
+          "hex": "#FD1B29",
+          "value": 7000
+        }
+      ]
+    },
+    {
+      "name": "vegetal earthy herb",
+      "hex": "#D5F856",
+      "children": [{
+          "name": "soil",
+          "hex": "#0C0E0F",
+          "value": 7000
+        },
+        {
+          "name": "fresh wood",
+          "hex": "#F9BB6E",
+          "value": 7000
+        },
+        {
+          "name": "cedar",
+          "hex": "#DE737F",
+          "value": 7000
+        },
+        {
+          "name": "tobacco",
+          "hex": "#F6C191",
+          "value": 7000
+        },
+        {
+          "name": "hay/straw",
+          "hex": "#F7E349",
+          "value": 7000
+        },
+        {
+          "name": "leafy greens",
+          "hex": "#4EE94B",
+          "value": 7000
+        },
+        {
+          "name": "olive",
+          "hex": "#AEE757",
+          "value": 7000
+        },
+        {
+          "name": "green pepper",
+          "hex": "#AAFB89",
+          "value": 7000
+        },
+        {
+          "name": "squash",
+          "hex": "#F2FD43",
+          "value": 7000
+        },
+        {
+          "name": "mushroom",
+          "hex": "#E1BB38",
+          "value": 7000
+        },
+        {
+          "name": "sweet pea",
+          "hex": "#D9FDA3",
+          "value": 7000
+        },
+        {
+          "name": "snow pea",
+          "hex": "#DDFF9E",
+          "value": 7000
+        },
+        {
+          "name": "grassy",
+          "hex": "#A2FC64",
+          "value": 7000
+        },
+        {
+          "name": "dill",
+          "hex": "#CAF88C",
+          "value": 7000
+        },
+        {
+          "name": "sage",
+          "hex": "#C2ED7D",
+          "value": 7000
+        },
+        {
+          "name": "mint",
+          "hex": "#DAFE7D",
+          "value": 7000
+        },
+        {
+          "name": "green tea",
+          "hex": "#C2DE32",
+          "value": 7000
+        },
+        {
+          "name": "black tea",
+          "hex": "#B3A6B0",
+          "value": 7000
+        },
+        {
+          "name": "hops",
+          "hex": "#FFB952",
+          "value": 7000
+        },
+        {
+          "name": "bergamot",
+          "hex": "#FEFFF7",
+          "value": 7000
+        }
+      ]
+    },
+    {
+      "name": "floral",
+      "hex": "FCFF98",
+      "children": [{
+          "name": "hibiscus",
+          "hex": "#FEB8FC",
+          "value": 7000
+        },
+        {
+          "name": "rose hips",
+          "hex": "#FFFAFF",
+          "value": 7000
+        },
+        {
+          "name": "lavender",
+          "hex": "#CFC7EA",
+          "value": 7000
+        },
+        {
+          "name": "magnolia",
+          "hex": "#FEFFDD",
+          "value": 7000
+        },
+        {
+          "name": "jasmine honeysuckle",
+          "hex": "#FEFFEF",
+          "value": 7000
+        },
+        {
+          "name": "orange blossom",
+          "hex": "#FAFDA0",
+          "value": 7000
+        },
+        {
+          "name": "lemongrass",
+          "hex": "#FEFFAA",
+          "value": 7000
+        }
+      ]
+    }
+  ]
+}

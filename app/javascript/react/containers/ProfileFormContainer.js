@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Coffeeburst from '../components/Coffeeburst'
 
 class ProfileFormContainer extends Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class ProfileFormContainer extends Component {
 
   render() {
     return(
-
+      <Coffeeburst />
     )
   }
 }
