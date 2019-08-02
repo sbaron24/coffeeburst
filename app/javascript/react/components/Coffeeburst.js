@@ -52,9 +52,12 @@ export default class Coffeeburst extends React.Component {
   };
 
   render() {
+    function updateSelection(selected, handleFlavors){
+      handleFlavors(selected)
+    }
     const {clicked, data, finalValue, pathValue, selected} = this.state;
     return (
-      <div className="basic-sunburst-example-wrapper">
+      <div className="coffeeburst">
         <Sunburst
           animation
           className="basic-sunburst-example"
@@ -83,18 +86,10 @@ export default class Coffeeburst extends React.Component {
                 })
           }
           onValueClick={node => {
-            if (selected[node.name]) {
-              delete selected[node.name]
-            } else {
-              selected[node.name] = node.hex
-            }
-
-            this.setState(
-              {selected: selected}
-              )
+            let selected = { [node.name]: node.hex }
+            updateSelection(selected, this.props.handleFlavors)
             }
           }
-
           style={{
             stroke: '#ddd',
             strokeOpacity: 0.3,

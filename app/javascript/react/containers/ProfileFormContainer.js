@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Coffeeburst from '../components/Coffeeburst'
+import FlavorFormContainer from '../components/FlavorFormContainer'
 
 class ProfileFormContainer extends Component {
   constructor(props) {
@@ -7,11 +7,16 @@ class ProfileFormContainer extends Component {
     this.state = {
       flavors: []
     }
+    this.handleFlavors = this.handleFlavors.bind(this)
+  }
+
+  handleFlavors(payload){
+    debugger
   }
 
   render() {
     return(
-      <Coffeeburst />
+      <FlavorFormContainer/>
     )
   }
 }
