@@ -6,7 +6,7 @@ const FlavorTile = (props) => {
 
   return (
     <div className="flavor-tile" style={{backgroundColor: color}}>
-      <p>{props.name}</p>
+      {props.name}
     </div>
   )
 }
