@@ -1,12 +1,16 @@
 import React from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import SearchContainer from './SearchContainer'
+import ProfileFormContainer from './ProfileFormContainer'
 
 export const App = (props) => {
 
   return (
     <BrowserRouter>
-      <Route exact path='/' component={SearchContainer}/>
+      <Switch>
+        <Route exact path='/' component={SearchContainer}/>
+        <Route exact path='/coffees/:id/profiles/new' component={ProfileFormContainer}/>
+      </Switch>
     </BrowserRouter>
   )
 }
