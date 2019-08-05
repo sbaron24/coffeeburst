@@ -1,0 +1,82 @@
+{
+  "children": [
+    {
+      "name": "light",
+      "hex": "#8adfca",
+      "children": [
+        {
+          "name": "watery",
+          "hex": "#8adfca"
+        },
+        {
+          "name": "tea-like",
+          "hex": "#8adfca"
+        },
+        {
+          "name": "silky",
+          "hex": "#8adfca"
+        },
+        {
+          "name": "slick",
+          "hex": "#8adfca"
+        },
+        {
+          "name": "juice",
+          "hex": "#8adfca"
+        }
+      ]
+    },
+    {
+      "name": "medium",
+      "hex": "#8adfca",
+      "children": [
+        {
+          "name": "smooth",
+          "hex": "#8adfca"
+        },
+        {
+          "name": "2% milk",
+          "hex": "#8adfca"
+        },
+        {
+          "name": "syrupy",
+          "hex": "#8adfca"
+        },
+        {
+          "name": "round",
+          "hex": "#8adfca"
+        },
+        {
+          "name": "creamy",
+          "hex": "#8adfca"
+        }
+      ]
+    },
+    {
+      "name": "heavy",
+      "hex": "#8adfca",
+      "children": [
+        {
+          "name": "full",
+          "hex": "#8adfca"
+        },
+        {
+          "name": "velvety",
+          "hex": "#8adfca"
+        },
+        {
+          "name": "big",
+          "hex": "#8adfca"
+        },
+        {
+          "name": "chewy",
+          "hex": "#8adfca"
+        },
+        {
+          "name": "coating",
+          "hex": "#8adfca"
+        }
+      ]
+    }
+  ]
+}
