@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_02_152919) do
+ActiveRecord::Schema.define(version: 2019_08_03_173956) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,15 @@ ActiveRecord::Schema.define(version: 2019_08_02_152919) do
     t.integer "creator_id", default: 1, null: false
   end
 
+  create_table "profile_qualities", force: :cascade do |t|
+    t.bigint "profile_id", null: false
+    t.bigint "quality_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["profile_id"], name: "index_profile_qualities_on_profile_id"
+    t.index ["quality_id"], name: "index_profile_qualities_on_quality_id"
+  end
+
   create_table "profiles", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "coffee_id", null: false
@@ -39,6 +48,14 @@ ActiveRecord::Schema.define(version: 2019_08_02_152919) do
     t.datetime "updated_at", null: false
     t.index ["coffee_id"], name: "index_profiles_on_coffee_id"
     t.index ["user_id"], name: "index_profiles_on_user_id"
+  end
+
+  create_table "qualities", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "color", null: false
+    t.string "quality_type", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

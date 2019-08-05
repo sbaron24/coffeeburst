@@ -2,6 +2,7 @@
   display: flex;
   background-color: #fafafa;
   margin: 10%;
+  margin-bottom: 0px;
 }
 
 .coffeeburst {
@@ -27,4 +28,16 @@
   border-color: black;
   margin: 4px;
   padding: 4px;
+}
+
+.button-class {
+  margin-bottom: 0px;
+  padding: 10px;
+  background-color: #ebebeb;
+  height:
+}
+
+#save-message {
+  margin-left: 10%;
+  padding: 3px;
 }
