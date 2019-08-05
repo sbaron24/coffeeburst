@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       post 'coffees/search', to: 'coffees#search'
+      resources :coffees, only: [] do
+        resources :profiles, only: [:create]
+      end
     end
   end
 end

@@ -8,45 +8,56 @@ class FlavorFormContainer extends Component {
     this.state = {
       flavors: []
     }
-    this.handleFlavors = this.handleFlavors.bind(this)
+    this.handleFlavorSelection = this.handleFlavorSelection.bind(this)
+    this.handleSaveClick = this.handleSaveClick.bind(this)
   }
 
-  handleFlavors(payload){
-    let deleted
-    let newState = this.state.flavors
-    this.state.flavors.forEach((flavor, index) => {
-      if (Object.keys(flavor).toString() == Object.keys(payload).toString()) {
-        deleted = newState.splice(index, 1)
-      }
+  handleFlavorSelection(payload){
+    let flavorIds = this.state.flavors.map(flavor => {
+      return flavor.id
     })
-    if (deleted == null) {
-      newState = this.state.flavors.concat(payload)
+
+    let newState = this.state.flavors
+    if (flavorIds.includes(payload.id)){
+      let deleteAtIndex = flavorIds.indexOf(payload.id)
+      newState.splice(deleteAtIndex, 1)
+    } else {
+      newState.push(payload)
     }
     this.setState({ flavors: newState })
+  }
+
+  handleSaveClick() {
+    let flavorIds = this.state.flavors.map(flavor => {
+      return flavor.id
+    })
+    let payload = {flavor_ids: flavorIds}
+    this.props.handleSavePost(payload)
   }
 
   render() {
 
     let flavorTiles = this.state.flavors.map(flavor => {
 
-      let flavorName = Object.keys(flavor)
-      let flavorColor = Object.values(flavor)
-
       return(
         <FlavorTile
-          key={flavorName}
-          name={flavorName}
-          color={flavorColor}
+          key={flavor.id}
+          name={flavor.name}
+          color={flavor.hex}
         />
       )
     })
 
     return(
-      <div className='flavor-form-container'>
-        <Coffeeburst handleFlavors={this.handleFlavors}/>
-        <div className='flavor-tile-container'>
-          {flavorTiles}
+      <div>
+        <div className='flavor-form-container'>
+          <button className='button-class' onClick={this.handleSaveClick}>Save</button>
+          <Coffeeburst handleFlavorSelection={this.handleFlavorSelection}/>
+          <div className='flavor-tile-container'>
+            {flavorTiles}
+          </div>
         </div>
+        <p id='save-message'>{this.props.saveMessage}</p>
       </div>
     )
   }

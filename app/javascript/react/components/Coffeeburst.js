@@ -40,9 +40,7 @@ export default class Coffeeburst extends React.Component {
   };
 
   render() {
-    function updateSelection(selected, handleFlavors){
-      handleFlavors(selected)
-    }
+
     const {data, finalValue, selected} = this.state;
     return (
       <div className="coffeeburst">
@@ -70,8 +68,8 @@ export default class Coffeeburst extends React.Component {
             })
           }
           onValueClick={node => {
-            let selected = { [node.name]: node.hex }
-            updateSelection(selected, this.props.handleFlavors)
+            let selected = { 'id': node.id, "name": node.name, "hex": node.hex }
+            this.props.handleFlavorSelection(selected)
             }
           }
           style={{
