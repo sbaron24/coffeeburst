@@ -1,0 +1,98 @@
+[
+  {
+    "id": 143,
+    "name": "light",
+    "hex": "#FFFFFD",
+    "children": [
+      {
+        "id": 138,
+        "name": "watery",
+        "hex": "#FFFFFD"
+      },
+      {
+        "id": 139,
+        "name": "tea-like",
+        "hex": "#FFFFFD"
+      },
+      {
+        "id": 140,
+        "name": "silky",
+        "hex": "#FFFFFD"
+      },
+      {
+        "id": 141,
+        "name": "slick",
+        "hex": "#FFFFFD"
+      },
+      {
+        "id": 142,
+        "name": "juice",
+        "hex": "#FFFFFD"
+      }
+    ]
+  },
+  {
+    "id": 149,
+    "name": "medium",
+    "hex": "#E4E4DA",
+    "children": [
+      {
+        "id": 144,
+        "name": "smooth",
+        "hex": "#E4E4DA"
+      },
+      {
+        "id": 145,
+        "name": "2% milk",
+        "hex": "#E4E4DA"
+      },
+      {
+        "id": 146,
+        "name": "syrupy",
+        "hex": "#E4E4DA"
+      },
+      {
+        "id": 147,
+        "name": "round",
+        "hex": "#E4E4DA"
+      },
+      {
+        "id": 148,
+        "name": "creamy",
+        "hex": "#E4E4DA"
+      }
+    ]
+  },
+  {
+    "id": 155,
+    "name": "heavy",
+    "hex": "#E8DED5",
+    "children": [
+      {
+        "id": 150,
+        "name": "full",
+        "hex": "#E8DED5"
+      },
+      {
+        "id": 151,
+        "name": "velvety",
+        "hex": "#E8DED5"
+      },
+      {
+        "id": 152,
+        "name": "big",
+        "hex": "#E8DED5"
+      },
+      {
+        "id": 153,
+        "name": "chewy",
+        "hex": "#E8DED5"
+      },
+      {
+        "id": 154,
+        "name": "coating",
+        "hex": "#E8DED5"
+      }
+    ]
+  }
+]
