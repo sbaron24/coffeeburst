@@ -687,6 +687,89 @@ flavor_data = {
   ]
 }
 
+body_data = {
+  "children" => [
+    {
+      "name" => "light",
+      "hex" => "#FFFFFD",
+      "children" => [
+        {
+          "name" => "watery",
+          "hex" => "#FFFFFD"
+        },
+        {
+          "name" => "tea-like",
+          "hex" => "#FFFFFD"
+        },
+        {
+          "name" => "silky",
+          "hex" => "#FFFFFD"
+        },
+        {
+          "name" => "slick",
+          "hex" => "#FFFFFD"
+        },
+        {
+          "name" => "juice",
+          "hex" => "#FFFFFD"
+        }
+      ]
+    },
+    {
+      "name" => "medium",
+      "hex" => "#E4E4DA",
+      "children" => [
+        {
+          "name" => "smooth",
+          "hex" => "#E4E4DA"
+        },
+        {
+          "name" => "2% milk",
+          "hex" => "#E4E4DA"
+        },
+        {
+          "name" => "syrupy",
+          "hex" => "#E4E4DA"
+        },
+        {
+          "name" => "round",
+          "hex" => "#E4E4DA"
+        },
+        {
+          "name" => "creamy",
+          "hex" => "#E4E4DA"
+        }
+      ]
+    },
+    {
+      "name" => "heavy",
+      "hex" => "#E8DED5",
+      "children" => [
+        {
+          "name" => "full",
+          "hex" => "#E8DED5"
+        },
+        {
+          "name" => "velvety",
+          "hex" => "#E8DED5"
+        },
+        {
+          "name" => "big",
+          "hex" => "#E8DED5"
+        },
+        {
+          "name" => "chewy",
+          "hex" => "#E8DED5"
+        },
+        {
+          "name" => "coating",
+          "hex" => "#E8DED5"
+        }
+      ]
+    }
+  ]
+}
+
 def seed_flavor_quality(data)
   if (!data['children'].nil?)
     data['children'].each do |child|
@@ -699,7 +782,20 @@ def seed_flavor_quality(data)
   end
 end
 
-seed_flavor_quality(flavor_data)
+def seed_body_quality(data)
+  if (!data['children'].nil?)
+    data['children'].each do |child|
+      seed_body_quality(child)
+      Quality.create!(
+        name: child['name'],
+        color: child['hex'],
+        quality_type: 'body'
+      )
+    end
+  end
+end
+
+seed_body_quality(body_data)
 
 sean = User.create(
   email: "sean@gmail.com",

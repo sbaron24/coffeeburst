@@ -8,10 +8,11 @@ class ProfileFormContainer extends Component {
     this.state = {
       saveMessage: "",
       flavors: [],
-      body: ""
+      selectedBodyId: ""
     }
     this.handleSavePost = this.handleSavePost.bind(this)
     this.handleFlavorSelection = this.handleFlavorSelection.bind(this)
+    this.handleBodySelection = this.handleBodySelection.bind(this)
   }
 
   handleFlavorSelection(payload) {
@@ -29,6 +30,10 @@ class ProfileFormContainer extends Component {
     this.setState({ flavors: newState })
   }
 
+  handleBodySelection(event) {
+    this.setState({ selectedBodyId: event.target.id })
+  }
+
   handleSavePost() {
     let flavorIds = this.state.flavors.map(flavor => {
         return flavor.id
@@ -38,7 +43,10 @@ class ProfileFormContainer extends Component {
     fetch(`/api/v1/coffees/${coffee_id}/profiles`, {
       credentials: 'same-origin',
       method: 'POST',
-      body: JSON.stringify({ flavor_ids: flavorIds }),
+      body: JSON.stringify({
+        flavor_ids: flavorIds,
+        body_id: this.state.selectedBodyId
+      }),
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
@@ -67,7 +75,10 @@ class ProfileFormContainer extends Component {
           flavors={this.state.flavors}
           handleFlavorSelection={this.handleFlavorSelection}
         />
-        <BodyFormContainer />
+        <BodyFormContainer
+          handleBodySelection={this.handleBodySelection}
+          selectedBodyId={this.state.selectedBodyId}
+        />
         <button className='button-class' onClick={this.handleSavePost}>Save</button>
         {this.state.saveMessage}
       </div>

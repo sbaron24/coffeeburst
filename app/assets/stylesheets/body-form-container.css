@@ -1,0 +1,12 @@
+.body-form-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.body-tile {
+  padding: 20px;
+}
+
+.selected {
+  color: #5344ba;
+}
