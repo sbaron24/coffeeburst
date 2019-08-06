@@ -1,12 +1,35 @@
 .body-form-container {
   display: flex;
   flex-wrap: wrap;
+  max-width: 650px;
+  margin: auto;
+  margin-top: 30px;
 }
 
 .body-tile {
-  padding: 20px;
+  padding: 18px;
 }
 
 .selected {
   color: #5344ba;
+}
+
+.description-form-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 900px;
+  width: 300px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.description-tile {
+  width: 120px;
+  height: 130px;
+  padding: 15px;
+  border-width: thin;
+  border-color: #e4e4e4;
+  border-style: solid;
+  margin: 10px;
 }

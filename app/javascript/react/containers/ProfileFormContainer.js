@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import FlavorFormContainer from '../components/FlavorFormContainer'
 import BodyFormContainer from '../components/BodyFormContainer'
+import DescriptionFormContainer from '../components/DescriptionFormContainer'
 
 class ProfileFormContainer extends Component {
   constructor(props) {
@@ -8,11 +9,13 @@ class ProfileFormContainer extends Component {
     this.state = {
       saveMessage: "",
       flavors: [],
-      selectedBodyId: ""
+      selectedBodyId: "",
+      selectedDescriptionId: ""
     }
     this.handleSavePost = this.handleSavePost.bind(this)
     this.handleFlavorSelection = this.handleFlavorSelection.bind(this)
     this.handleBodySelection = this.handleBodySelection.bind(this)
+    this.handleDescriptionSelection = this.handleDescriptionSelection.bind(this)
   }
 
   handleFlavorSelection(payload) {
@@ -34,6 +37,10 @@ class ProfileFormContainer extends Component {
     this.setState({ selectedBodyId: event.target.id })
   }
 
+  handleDescriptionSelection(event) {
+    this.setState({ selectedDescriptionId: event.target.id })
+  }
+
   handleSavePost() {
     let flavorIds = this.state.flavors.map(flavor => {
         return flavor.id
@@ -45,7 +52,8 @@ class ProfileFormContainer extends Component {
       method: 'POST',
       body: JSON.stringify({
         flavor_ids: flavorIds,
-        body_id: this.state.selectedBodyId
+        body_id: this.state.selectedBodyId,
+        description_id: this.state.selectedDescriptionId
       }),
       headers: {
         'Accept': 'application/json',
@@ -78,6 +86,10 @@ class ProfileFormContainer extends Component {
         <BodyFormContainer
           handleBodySelection={this.handleBodySelection}
           selectedBodyId={this.state.selectedBodyId}
+        />
+        <DescriptionFormContainer
+          handleDescriptionSelection={this.handleDescriptionSelection}
+          selectedDescriptionId={this.state.selectedDescriptionId}
         />
         <button className='button-class' onClick={this.handleSavePost}>Save</button>
         {this.state.saveMessage}
