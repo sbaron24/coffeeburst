@@ -770,6 +770,49 @@ body_data = {
   ]
 }
 
+description_data = [
+  {
+    "name" => "crisp bright vibrant tart",
+    "hex" => "#FEFEF2"
+  },
+  {
+    "name" => "muted dull mild",
+    "hex" => "#E3E5E0"
+  },
+  {
+    "name" => "wild unbalanced sharp point",
+    "hex" => "#FBE9FD"
+  },
+  {
+    "name" => "structured balanced rounded",
+    "hex" => "#FCFCA2"
+  },
+  {
+    "name" => "dense deep complex",
+    "hex" => "#F4B0FF"
+  },
+  {
+    "name" => "soft faint delicate",
+    "hex" => "#F5FEFC"
+  },
+  {
+    "name" => "juicy",
+    "hex" => "#FFFCDF"
+  },
+  {
+    "name" => "dry astringent",
+    "hex" => "#FEFFAE"
+  },
+  {
+    "name" => "lingering dirty",
+    "hex" => "#C4C8B7"
+  },
+  {
+    "name" => "quick clean",
+    "hex" => "#B0C0F4"
+  }
+]
+
 def seed_flavor_quality(data)
   if (!data['children'].nil?)
     data['children'].each do |child|
@@ -795,7 +838,19 @@ def seed_body_quality(data)
   end
 end
 
+def seed_description_quality(data)
+  data.each do |description|
+    Quality.create!(
+      name: description['name'],
+      color: description['hex'],
+      quality_type: 'description'
+    )
+  end
+end
+
+seed_flavor_quality(flavor_data)
 seed_body_quality(body_data)
+seed_description_quality(description_data)
 
 sean = User.create(
   email: "sean@gmail.com",
