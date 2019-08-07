@@ -1,6 +1,11 @@
 class Api::V1::ProfilesController < ApplicationController
   protect_from_forgery unless: -> { request.format.json? }
 
+  def index
+    profile = Profile.where(coffee_id: params[:coffee_id])
+    render json: { profileExists: !profile.empty? }
+  end
+
   def create
     coffee = Coffee.where(id: params[:coffee_id])[0]
     if coffee

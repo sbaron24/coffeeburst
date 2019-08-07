@@ -4,3 +4,11 @@
   <h6>from <%= @coffee.country %>, <%= @coffee.region %></h6>
   <p>Process: <%= @coffee.process %>, Altitude: <%= @coffee.altitude %></p>
 </div>
+
+<% if !current_user.nil? %>
+  <div id='app'></div>
+<% else %>
+  <p>
+    "sign in to add an profile"
+    </p>
+<% end %>

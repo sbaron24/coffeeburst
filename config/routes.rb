@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       post 'coffees/search', to: 'coffees#search'
       resources :coffees, only: [] do
-        resources :profiles, only: [:create]
+        resources :profiles, only: [:create, :index]
       end
     end
   end
