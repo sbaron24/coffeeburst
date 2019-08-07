@@ -19,6 +19,7 @@ class CoffeesController < ApplicationController
 
   def show
     @coffee = Coffee.find(params[:id])
+    @profile = Profile.where(coffee: @coffee)
   end
 
   def coffee_params
