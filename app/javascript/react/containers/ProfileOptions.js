@@ -35,8 +35,12 @@ class ProfileOptions extends Component {
     if (this.state.profileExists == null) {
       return ""
     } else if (!this.state.profileExists) {
-      return "Add an official profile"
-    } 
+      let coffee_id = this.props.match.params.id
+      return (
+          <a href={`/coffees/${coffee_id}/profiles/new`}>
+          Add a new profile</a>
+      )
+    }
   }
 
   render() {

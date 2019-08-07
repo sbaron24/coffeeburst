@@ -8,7 +8,5 @@
 <% if !current_user.nil? %>
   <div id='app'></div>
 <% else %>
-  <p>
-    "sign in to add an profile"
-    </p>
+  <%= link_to 'Sign in to access attribute profile', new_user_session_path %>
 <% end %>
