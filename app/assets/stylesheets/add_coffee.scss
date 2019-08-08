@@ -1,0 +1,23 @@
+.field {
+  padding: 5px;
+}
+
+.form-section {
+  margin: auto;
+  max-width: 800px;
+  margin-top: 3rem;
+  background-color: rgba(227, 227, 227, 0.63);
+  padding: 1rem;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(148, 148, 148);
+
+  label {
+    color: black;
+  }
+}
+
+.required-section p {
+  font-size: 12px;
+  margin-left: 5px;
+}
