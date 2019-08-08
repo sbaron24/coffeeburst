@@ -1,21 +1,43 @@
+body {
+  background-image: image-url('homepage.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.top-bar {
+  background-color: #402519;
+}
+
+img {
+  width: 75px;
+  margin-left: 5px;
+}
 
 .search-container {
-  max-width: 90%;
-  margin-top: 3rem;
+  max-width: 1000px;
   padding: 2rem;
   margin: auto;
+  height: 700px;
+  padding-top: 150px;
+  margin-top: -75px;
 }
 
 .search-bar {
   margin-bottom: 1rem;
   max-width: 600px;
   margin: auto;
+
+  label {
+    color: black;
+  }
 }
 
 .results-container {
-  display: flex;
-  flex-wrap: wrap;
-  width: 600px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 0px;
+  max-width: 600px;
   margin: auto;
 }
 
@@ -24,8 +46,7 @@
   border-color: grey;
   border-width: 1px;
   border-style: solid;
-  padding: 3px;
-  margin: 8px;
+  margin: auto;
   padding: 15px;
   text-align: center;
   width: 150px;
@@ -58,4 +79,10 @@
 .details {
   display: inline;
   font-size: 10px;
+}
+
+@media only screen and (min-width: 40.0625em) {
+  .top-bar-section li:not(.has-form) a:not(.button){
+    background-color: #402519;
+  }
 }
