@@ -1,12 +1,14 @@
 .credentials {
   max-width: 400px;
   margin: auto;
-  margin-top: 2rem;
+  margin-top: 4rem;
   background-color: rgba(227, 227, 227, 0.63);
   padding: 0.5rem;
-  border-style: solid;
-  border-width: 1px;
-  border-color: rgb(148, 148, 148);
+  border-radius: 10px;
+  background-image: image-url('beans.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
   label {
     color: black;

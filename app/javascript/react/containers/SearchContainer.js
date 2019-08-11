@@ -29,7 +29,7 @@ class SearchContainer extends Component {
 
   render() {
     return(
-      <div className='search-container'>
+      <div className='search-container background'>
         <SearchBar handleFetch={this.fetchResults} />
         <SearchResultsContainer coffees={this.state.coffees} />
       </div>

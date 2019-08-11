@@ -35,7 +35,7 @@ export default class Coffeeburst extends React.Component {
   state = {
     pathValue: false,
     data: decoratedData,
-    finalValue: 'SUNBURST',
+    finalValue: 'Flavors',
     selected: {}
   };
 

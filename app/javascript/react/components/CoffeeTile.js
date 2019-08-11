@@ -1,13 +1,11 @@
 import React from 'react'
 
 const CoffeeTile = (props) => {
-
   return(
     <a href={`coffees/${props.id}`}>
       <div className='coffee-tile'>
 
-        <div className='image'>
-        </div>
+        <img src={props.image_url}/>
 
         <div className='details'>
           <h6>{props.name}</h6>

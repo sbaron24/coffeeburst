@@ -65,10 +65,13 @@ const BodyFormContainer = (props) => {
   })
 
   return(
-    <div className='body-form-container'>
+    <div className='form-container'>
+    <h3>What kind of <strong>body</strong> does this coffee have?</h3>
+    <div className='form'>
       {lightTiles}
       {mediumTiles}
       {heavyTiles}
+    </div>
     </div>
   )
 }

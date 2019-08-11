@@ -18,6 +18,7 @@ class SearchResultsContainer extends Component {
           roaster={coffee.roaster}
           country={coffee.country}
           roast={coffee.roast}
+          image_url={coffee.image_url}
         />
       )
     })

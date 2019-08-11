@@ -34,7 +34,7 @@ class SearchBar extends Component {
     return(
       <div className='search-bar'>
         <form>
-        <label>What are you drinking?</label>
+        <label className='main-header'>What are you drinking?</label>
           <input
             placeholder="Enter a coffee, roaster, country of origin, or roast level"
             type='text'
@@ -43,7 +43,7 @@ class SearchBar extends Component {
             onChange={this.handleChange}
           />
         </form>
-        <a href='coffees/new'>Add a coffee</a>
+        <a href='coffees/new' className='button'>Add a coffee</a>
       </div>
     )
   }

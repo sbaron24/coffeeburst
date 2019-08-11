@@ -1,0 +1,108 @@
+.profile-form-container {
+  background-color: #e7e7e7;
+  max-width: 750px;
+  margin: 4rem auto;
+  border-radius: 4px;
+  padding-top: 15px;
+  h1 {
+    text-align: center;
+  }
+
+  .form-info {
+    font-style: italic;
+    color: #818181;
+    text-align: center;
+    padding: 20px;
+    width: 75%;
+    margin: auto;
+  }
+
+  .submit-area {
+    width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+  }
+
+  button {
+    width: 400px;
+    border-radius: 4px;
+  }
+
+  .form-container {
+
+    .form {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #fafafa;
+      margin: auto;
+      max-width: 700px;
+      border-radius: 4px;
+      margin-bottom: 3rem;
+      padding: 2rem;
+    }
+
+    h3 {
+      text-align: center;
+    }
+  }
+}
+
+.coffeeburst {
+  width: 350px;
+  height: 300px;
+  margin-left: 15%;
+}
+
+.flavor-tile-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 200px;
+  margin: auto;
+  margin-left: 40px;
+
+  h3 {
+    text-align: center;
+  }
+}
+
+.flavor-tile {
+  max-width: 100px;
+  border-width: thin;
+  border-radius: 4px;
+  border-style: solid;
+  border-color: black;
+  margin: 4px;
+  padding: 4px;
+  -webkit-box-shadow: -1px 3px 11px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 3px 11px 0px rgba(0,0,0,0.75);
+  box-shadow: -1px 3px 11px 0px rgba(0,0,0,0.75);
+}
+
+.body-tile {
+  padding: 18px;
+}
+
+.description-tile {
+  width: 120px;
+  height: 130px;
+  padding: 15px;
+  border-width: thin;
+  border-color: #e4e4e4;
+  border-style: solid;
+  margin: 10px auto;
+  border-radius: 4px;
+}
+
+.selected {
+  border-style: solid;
+  border-width: thin;
+  border-color: black;
+}
+
+#save-message {
+  margin-left: 10%;
+  padding: 3px;
+}

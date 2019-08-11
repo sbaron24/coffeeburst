@@ -24,8 +24,11 @@ const DescriptionFormContainer = (props) => {
   })
 
   return(
-    <div className='description-form-container'>
+    <div className='form-container'>
+    <h3>What <strong>adjectives</strong> describe this coffee?</h3>
+    <div className='form'>
       {descriptionTiles}
+    </div>
     </div>
   )
 }

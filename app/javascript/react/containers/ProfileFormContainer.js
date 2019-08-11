@@ -78,7 +78,10 @@ class ProfileFormContainer extends Component {
 
   render() {
     return(
-      <div>
+      <div className='profile-form-container'>
+      <h1>Enter a profile</h1>
+      <p class='form-info'>Please verify information entered below about the coffee
+      by checking the packaging or roaster's website.</p>
         <FlavorFormContainer
           flavors={this.state.flavors}
           handleFlavorSelection={this.handleFlavorSelection}
@@ -91,8 +94,10 @@ class ProfileFormContainer extends Component {
           handleDescriptionSelection={this.handleDescriptionSelection}
           selectedDescriptionId={this.state.selectedDescriptionId}
         />
-        <button className='button-class' onClick={this.handleSavePost}>Save</button>
-        {this.state.saveMessage}
+        <div class='submit-area'>
+          <p>{this.state.saveMessage}</p>
+          <button className='button-class' onClick={this.handleSavePost}>Save</button>
+        </div>
       </div>
 
     )
