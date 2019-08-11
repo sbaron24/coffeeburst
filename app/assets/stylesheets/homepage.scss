@@ -1,21 +1,32 @@
-body {
-  background-image: image-url('homepage.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+.main-header {
+  font-size: 40px;
+  padding: 5px;
+  text-align: center;
+  background-color: rgba(204, 204, 204, 0.53);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .top-bar {
-  background-color: #402519;
-}
+  background-color: #C8AE92;
+  height: 85px;
 
-img {
-  width: 75px;
-  margin-left: 5px;
+  img {
+    width: 160px;
+    margin-top: 10px;
+    margin-left: 15px;
+  }
+
+  .right {
+    margin: 1.5rem;
+    a {
+      font-size: 1rem;
+    }
+  }
+
 }
 
 .search-container {
-  max-width: 500px;
   padding: 2rem;
   margin: auto;
   height: 700px;
@@ -24,20 +35,35 @@ img {
 }
 
 .search-bar {
-  margin-bottom: 1rem;
   max-width: 600px;
   margin: auto;
+  margin-bottom: 10px;
 
   label {
-    color: black;
+    color: #090D0C;
   }
+}
+
+.button {
+  background-color: #C8AE92;
+  padding: 5px;
+  border-style: solid;
+  border-width: 1px;
+  color: #090D0C;
+  border-radius: 4px;
+  border-color: #090D0C;
+}
+
+a.button:hover {
+  background: rgba(#F9D5AE, 0.77);
+  color: #090D0C
 }
 
 .results-container {
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-gap: 0px;
-  max-width: 600px;
+  grid-gap: 15px;
+  max-width: 500px;
   margin: auto;
 }
 
@@ -48,9 +74,13 @@ img {
   border-style: solid;
   margin: auto;
   padding: 15px;
+  border-radius: 5px;
   text-align: center;
   width: 150px;
   height: 250px;
+  -webkit-box-shadow: -4px -4px 18px -7px rgba(0,0,0,0.41);
+  -moz-box-shadow: -4px -4px 18px -7px rgba(0,0,0,0.41);
+  box-shadow: -4px -4px 18px -7px rgba(0,0,0,0.41);
 }
 
 .coffee-tile h6 {
@@ -68,14 +98,6 @@ img {
   color: grey;
 }
 
-.image {
-  width: 100px;
-  height: 100px;
-  background-color: #d3c2fa;
-  margin: auto;
-  margin-bottom: 10px;
-}
-
 .details {
   display: inline;
   font-size: 10px;
@@ -83,6 +105,21 @@ img {
 
 @media only screen and (min-width: 40.0625em) {
   .top-bar-section li:not(.has-form) a:not(.button){
-    background-color: #402519;
+    background-color: #C8AE92;
   }
+}
+
+.background {
+  background-image: image-url('homepage.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.link:hover {
+  background-color: blue
+}
+
+.flash {
+  color: white;
 }

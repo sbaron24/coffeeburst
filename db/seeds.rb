@@ -868,7 +868,8 @@ Coffee.create(
   altitude: "1600-2200",
   variety: "Caturra, Castillo, Colombia",
   organic: false,
-  creator: sean
+  creator: sean,
+  image_url: "https://www.mistobox.com/media/catalog/product/cache/0/image/450x450/9df78eab33525d08d6e5fb8d27136e95/g/o/good-folks-single-origin_1.png"
 )
 
 Coffee.create(
@@ -883,7 +884,8 @@ Coffee.create(
   producer: "El Desarollo Growers Association",
   variety: "Bourbon, Caturra, Castillo, Colombia",
   organic: false,
-  creator: sean
+  creator: sean,
+  image_url: "https://www.mistobox.com/media/catalog/product/cache/0/image/450x450/9df78eab33525d08d6e5fb8d27136e95/h/u/huckleberry-single-origin-coffee-green.png"
 )
 
 Coffee.create(
@@ -894,7 +896,9 @@ Coffee.create(
   roast: "Light",
   coffee_type: "Blend",
   organic: true,
-  creator: sean
+  creator: sean,
+  image_url: "https://www.mistobox.com/media/catalog/product/cache/0/image/450x450/9df78eab33525d08d6e5fb8d27136e95/e/v/evans-brothers-light_102016-1_1_9.jpg"
+
 )
 
 Coffee.create(
@@ -909,27 +913,66 @@ Coffee.create(
   producer: "Sombezi",
   variety: "Bourbon",
   organic: false,
-  creator: sean
+  creator: sean,
+  image_url: "https://www.mistobox.com/media/catalog/product/cache/0/image/450x450/9df78eab33525d08d6e5fb8d27136e95/e/v/evans-brothers-light_102016-1.jpg"
 )
 
 Coffee.create(
-  name: "Fall Line Espresso",
-  roaster: "Evans Brothers Roasters",
-  country: "Brazil, Colombia, Guatemala",
-  process: "Fully washed, pulped natural, full natural",
-  coffee_type: "Espresso",
-  region: "Songwe, Mbozi",
-  roast: "Medium",
-  creator: sean
+  name: "Kenya Getuya AA Organic",
+  roaster: "Noble Coffee Roasting",
+  country: "Kenya",
+  process: "Anaerobic washed",
+  coffee_type: "Single origin",
+  region: "Kirinyaga",
+  roast: "Light",
+  organic: true,
+  creator: sean,
+  image_url: "https://www.mistobox.com/media/catalog/product/cache/0/image/450x450/9df78eab33525d08d6e5fb8d27136e95/n/o/noble-africa_1.png"
 )
 
 Coffee.create(
-  name: "Brandywine Coffee Roasters",
-  roaster: "Ethiopia Limu Lemma Niguisse Natural",
+  name: "Ethiopia Limu Lemma Niguisse Natural",
+  roaster: "Brandywine Coffee Roasters",
   country: "Ethiopia",
   process: "Full natural",
   coffee_type: "Single origin",
   region: "Limu",
   roast: "Light",
-  creator: sean
+  creator: sean,
+  image_url: "https://www.mistobox.com/media/catalog/product/cache/0/image/450x450/9df78eab33525d08d6e5fb8d27136e95/b/r/brandywine-ethiopia-lemma-niguisse-natural.png"
+)
+
+Coffee.create(
+  name: "Ecuador Juan Pena",
+  roaster: "Cat & Cloud Coffee",
+  country: "Ecuador",
+  process: "Fully washed",
+  coffee_type: "Single origin",
+  region: "Saraguro, Loja",
+  roast: "Light",
+  creator: sean,
+  altitude: "2100",
+  image_url: "https://www.mistobox.com/media/catalog/product/cache/0/image/450x450/9df78eab33525d08d6e5fb8d27136e95/c/a/cat-cloud-single-origin.png"
+)
+
+Coffee.create(
+  name: "Justice",
+  roaster: "Higher Grounds Coffee",
+  country: "Ethiopia, Guatemala",
+  process: "Fully washed",
+  coffee_type: "Blend",
+  producer: "Various small holder producers",
+  roast: "Medium light",
+  creator: sean,
+  image_url: "https://www.mistobox.com/media/catalog/product/cache/0/image/450x450/9df78eab33525d08d6e5fb8d27136e95/h/g/hgt-justice.png"
+)
+
+Coffee.create(
+  name: "Café Carmelita Decaf Fair Trade & Organic",
+  roaster: "Tony's Coffee",
+  country: "Central and South America",
+  process: "Fully washed, swiss water decaffeinated",
+  roast: "Medium dark",
+  creator: sean,
+  image_url: "https://www.mistobox.com/media/catalog/product/cache/0/image/450x450/9df78eab33525d08d6e5fb8d27136e95/t/o/tonys-cafe-carmelita-decaf.png"
 )

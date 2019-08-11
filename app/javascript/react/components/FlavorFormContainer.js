@@ -16,8 +16,9 @@ const FlavorFormContainer = (props) => {
   })
 
     return(
-      <div>
-        <div className='flavor-form-container'>
+      <div className='form-container'>
+      <h3>What <strong>flavors</strong> does this coffee have?</h3>
+        <div className='form'>
           <Coffeeburst handleFlavorSelection={props.handleFlavorSelection}/>
           <div className='flavor-tile-container'>
             {flavorTiles}

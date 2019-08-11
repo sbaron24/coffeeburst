@@ -1,12 +1,15 @@
-<div class='main-details'>
-  <h3><%= @coffee.name %></h3>
-  <h5>by <%= @coffee.roaster %> and <%= @coffee.producer %></h5>
-  <h6>from <%= @coffee.country %>, <%= @coffee.region %></h6>
-  <p>Process: <%= @coffee.process %>, Altitude: <%= @coffee.altitude %></p>
-</div>
+<div class='show-main'>
+  <img src= <%= @coffee.image_url %> />
+  <div class="coffee-details">
+    <h3><%= @coffee.name %></h3>
+    <h5><%= @coffee.roaster %> </h5>
+    <h6><%= @coffee.country %></h6>
+    <p><%= @coffee.process %></p>
+  </div>
 
-<% if current_user.nil? && @profile.empty? %>
-  <%= link_to 'Sign in add an attribute profile', new_coffee_profile_path(@coffee.id) %>
-<% elsif !current_user.nil? && @profile.empty? %>
-  <%= link_to 'Add an attribute profile', new_coffee_profile_path(@coffee.id) %>
-<% end %>
+  <% if current_user.nil? && @profile.empty? %>
+  <%= link_to 'Sign in add an attribute profile', new_coffee_profile_path(@coffee.id), :class => 'button' %>
+  <% elsif !current_user.nil? && @profile.empty? %>
+  <%= link_to 'Add an attribute profile', new_coffee_profile_path(@coffee.id), :class => 'button' %>
+  <% end %>
+</div>
