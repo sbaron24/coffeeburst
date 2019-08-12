@@ -9,7 +9,6 @@ Currently:
 * View details about a coffee
 * Add an attribute profile
 
-
 Coming soon:
 * Coffee quizzes
 * Verified profiles
@@ -20,6 +19,8 @@ Coming soon:
 
 The app is in production at https://coffeeburst.herokuapp.com/
 
+## Development
+
 Main dependencies:
 
 * Ruby version: 2.4.5
@@ -27,8 +28,10 @@ Main dependencies:
 * React 16.8.6
 * React-vis ^1.11.7
 
-* Other dependencies: see package.json
+Other dependencies: see package.json
 
-* Database creation: run 'bundle exec rake db:create && bundle exec rake db:migrate' 
+Database creation: run 'bundle exec rake db:create && bundle exec rake db:migrate' 
 
-* Database initialization: run 'bundle exec rake db:seed'
+Database initialization: run 'bundle exec rake db:seed'
+
+Running the app: run 'rails s' and 'yarn start' for a node dev server
