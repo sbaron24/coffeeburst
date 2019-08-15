@@ -10,12 +10,16 @@ class ProfileFormContainer extends Component {
       saveMessage: "",
       flavors: [],
       selectedBodyId: "",
-      selectedDescriptionId: ""
+      selectedDescriptionId: "",
+      errors: {}
     }
     this.handleSavePost = this.handleSavePost.bind(this)
     this.handleFlavorSelection = this.handleFlavorSelection.bind(this)
     this.handleBodySelection = this.handleBodySelection.bind(this)
     this.handleDescriptionSelection = this.handleDescriptionSelection.bind(this)
+    this.validateFlavorsSelected = this.validateFlavorsSelected.bind(this)
+    this.validateBodySelected = this.validateBodySelected.bind(this)
+    this.validateDescriptionSelected = this.validateDescriptionSelected.bind(this)
   }
 
   handleFlavorSelection(payload) {
@@ -42,45 +46,99 @@ class ProfileFormContainer extends Component {
   }
 
   handleSavePost() {
-    let flavorIds = this.state.flavors.map(flavor => {
+    if (
+      this.validateFlavorsSelected() &&
+      this.validateBodySelected() &&
+      this.validateDescriptionSelected()
+    ) {
+      let flavorIds = this.state.flavors.map(flavor => {
         return flavor.id
       })
 
-    let coffee_id = this.props.match.params.id
-    fetch(`/api/v1/coffees/${coffee_id}/profiles`, {
-      credentials: 'same-origin',
-      method: 'POST',
-      body: JSON.stringify({
-        flavor_ids: flavorIds,
-        body_id: this.state.selectedBodyId,
-        description_id: this.state.selectedDescriptionId
-      }),
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      }
-    })
-    .then(response => {
-      if (response.ok) {
-        return response;
-      } else {
-        let errorMessage = `${response.status} (${response.statusText})`,
+      let coffee_id = this.props.match.params.id
+      fetch(`/api/v1/coffees/${coffee_id}/profiles`, {
+        credentials: 'same-origin',
+        method: 'POST',
+        body: JSON.stringify({
+          flavor_ids: flavorIds,
+          body_id: this.state.selectedBodyId,
+          description_id: this.state.selectedDescriptionId
+        }),
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          return response;
+        } else {
+          let errorMessage = `${response.status} (${response.statusText})`,
           error = new Error(errorMessage);
-        throw(error);
-      }
-    })
-    .then(response => response.json())
-    .then(body => {
-      this.setState({ saveMessage: body.message })
-    })
-    .catch(error => console.error(`Error in fetch: ${error.message}`));
+          throw(error);
+        }
+      })
+      .then(response => response.json())
+      .then(body => {
+        this.setState({ saveMessage: body.message })
+      })
+      .catch(error => console.error(`Error in fetch: ${error.message}`));
+    }
+  }
+
+  validateFlavorsSelected() {
+    if (this.state.flavors.length < 3) {
+      let newError = { flavorsSelected: 'You must select at least 3 flavors' }
+      this.setState({ errors: Object.assign({}, this.state.errors, newError) })
+      return false
+    } else {
+      let errorState = this.state.errors
+      delete errorState.flavorsSelected
+      this.setState({ errors: errorState })
+      return true
+    }
+  }
+
+  validateBodySelected() {
+    if (this.state.selectedBodyId == '') {
+      let newError = { bodySelected: 'You must select a body' }
+      this.setState({ errors: Object.assign({}, this.state.errors, newError) })
+      return false
+    } else {
+      let errorState = this.state.errors
+      delete errorState.bodySelected
+      this.setState({ errors: errorState })
+      return true
+    }
+  }
+
+  validateDescriptionSelected() {
+    if (this.state.selectedDescriptionId == '') {
+      let newError = { descriptionSelected: 'You must select a description' }
+      this.setState({ errors: Object.assign({}, this.state.errors, newError) })
+      return false
+    } else {
+      let errorState = this.state.errors
+      delete errorState.descriptionSelected
+      this.setState({ errors: errorState })
+      return true
+    }
   }
 
   render() {
+    let errorItems
+    let errorDiv
+    if (Object.keys(this.state.errors).length > 0) {
+      let errorItems = Object.values(this.state.errors).map(error => {
+        return (<li key={error}>{error}</li>)
+      })
+      errorDiv = <div>{errorItems}</div>
+    }
+
     return(
       <div className='profile-form-container'>
       <h1>Enter a profile</h1>
-      <p class='form-info'>Please verify information entered below about the coffee
+      <p className='form-info'>Please verify information entered below about the coffee
       by checking the packaging or roaster's website.</p>
         <FlavorFormContainer
           flavors={this.state.flavors}
@@ -94,7 +152,8 @@ class ProfileFormContainer extends Component {
           handleDescriptionSelection={this.handleDescriptionSelection}
           selectedDescriptionId={this.state.selectedDescriptionId}
         />
-        <div class='submit-area'>
+        <div className='submit-area'>
+          {errorDiv}
           <p>{this.state.saveMessage}</p>
           <button className='button-class' onClick={this.handleSavePost}>Save</button>
         </div>

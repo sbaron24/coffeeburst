@@ -1,5 +1,6 @@
 class CoffeesController < ApplicationController
    before_action :authenticate_user!, except: [:show]
+   rescue_from ActiveRecord::RecordNotFound, with: :handle_coffee_not_found
 
   def new
     @coffee = Coffee.new()
@@ -36,5 +37,12 @@ class CoffeesController < ApplicationController
       :variety,
       :organic
     )
+  end
+
+  private
+
+  def handle_coffee_not_found
+    @message = 'Coffee not found'
+    render :not_found
   end
 end
