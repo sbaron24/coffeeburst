@@ -58,3 +58,15 @@ From a coffee's show page, click to add an attribute profile for a coffee. If no
 ![](add_attribute_profile.gif)
 
 Select at least 3 flavors based on taste, choose a description for the body and a more general description for the coffee. Click to save the profile.
+
+## More information
+
+The following technologies were used to build Coffeeburst:
+
+* Ruby/Rails
+* JavaScript/React
+* PostgreSQL
+* [react-vis](https://github.com/uber/react-vis) (by Uber)
+* Webpacker
+
+Special thanks to [mistobox.com](mistobox.com) for imagery to seed the app
