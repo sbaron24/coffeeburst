@@ -2,27 +2,11 @@ require "rails_helper"
 
 RSpec.describe Api::V1::CoffeesController, type: :controller do
 
-  user = FactoryBot.create(:user)
-
-  let!(:coffee) { Coffee.create(
-    name: "Colombia San Lorenzo",
-    roaster: "Greenway Coffee Company",
-    country: "Colombia",
-    process: "Fully washed",
-    roast: "Medium light",
-    creator: user,
-    image_url: "https://www.mistobox.com/media/catalog/product/cache/0/image/450x450/9df78eab33525d08d6e5fb8d27136e95/g/o/good-folks-single-origin_1.png"
-  )}
-
-  let!(:coffee2) { Coffee.create(
-    name: "Colombia San Lorenzo",
-    roaster: "Greenway Coffee Company",
-    country: "Colombia",
-    process: "Fully washed",
-    roast: "dark",
-    creator: user,
-    image_url: "https://www.mistobox.com/media/catalog/product/cache/0/image/450x450/9df78eab33525d08d6e5fb8d27136e95/g/o/good-folks-single-origin_1.png"
-  )}
+  before(:all) do
+    user = FactoryBot.create(:user)
+    coffee = FactoryBot.create(:coffee, creator: user)
+    coffee2 = FactoryBot.create(:coffee, creator: user, roast: 'dark')
+  end
 
   describe "POST#search for coffees from colombia" do
     it "returns a matching coffee" do
