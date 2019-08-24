@@ -1,10 +1,8 @@
 require "rails_helper"
 
 RSpec.describe Api::V1::CoffeesController, type: :controller do
-  let!(:sean) { User.create(
-    email: "sean@gmail.com",
-    password: "password"
-  )}
+
+  user = FactoryBot.create(:user)
 
   let!(:coffee) { Coffee.create(
     name: "Colombia San Lorenzo",
@@ -12,27 +10,7 @@ RSpec.describe Api::V1::CoffeesController, type: :controller do
     country: "Colombia",
     process: "Fully washed",
     roast: "Medium light",
-    coffee_type: "Single origin",
-    region: "Caldas",
-    altitude: "1600-2200",
-    variety: "Caturra, Castillo, Colombia",
-    organic: false,
-    creator: sean,
-    image_url: "https://www.mistobox.com/media/catalog/product/cache/0/image/450x450/9df78eab33525d08d6e5fb8d27136e95/g/o/good-folks-single-origin_1.png"
-  )}
-
-  let!(:coffee) { Coffee.create(
-    name: "Colombia San Lorenzo",
-    roaster: "Greenway Coffee Company",
-    country: "Colombia",
-    process: "Fully washed",
-    roast: "Medium light",
-    coffee_type: "Single origin",
-    region: "Caldas",
-    altitude: "1600-2200",
-    variety: "Caturra, Castillo, Colombia",
-    organic: false,
-    creator: sean,
+    creator: user,
     image_url: "https://www.mistobox.com/media/catalog/product/cache/0/image/450x450/9df78eab33525d08d6e5fb8d27136e95/g/o/good-folks-single-origin_1.png"
   )}
 
@@ -42,12 +20,7 @@ RSpec.describe Api::V1::CoffeesController, type: :controller do
     country: "Colombia",
     process: "Fully washed",
     roast: "dark",
-    coffee_type: "Single origin",
-    region: "Caldas",
-    altitude: "1600-2200",
-    variety: "Caturra, Castillo, Colombia",
-    organic: false,
-    creator: sean,
+    creator: user,
     image_url: "https://www.mistobox.com/media/catalog/product/cache/0/image/450x450/9df78eab33525d08d6e5fb8d27136e95/g/o/good-folks-single-origin_1.png"
   )}
 
