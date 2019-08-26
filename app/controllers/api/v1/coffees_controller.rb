@@ -2,7 +2,9 @@ class Api::V1::CoffeesController < ApplicationController
   protect_from_forgery unless: -> { request.format.json? }
 
   def search
+
     coffees = intersection_search(parse_search)
+
     render json: {coffees: serialize_coffees(coffees)}
   end
 
@@ -14,7 +16,7 @@ class Api::V1::CoffeesController < ApplicationController
   end
 
   def intersection_search(search_word_array)
-    coffees = Coffee.all()
+    coffees = Coffee.all
     search_word_array.each do |term|
       coffees = coffees.where(
         'name ILIKE ? OR

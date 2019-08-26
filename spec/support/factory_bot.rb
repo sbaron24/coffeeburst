@@ -7,4 +7,13 @@ FactoryBot.define do
     password_confirmation { 'password' }
   end
 
+  factory :coffee do
+    name { "Colombia San Lorenzo" }
+    roaster { "Greenway Coffee Company" }
+    country { "Colombia" }
+    process { "Fully washed" }
+    roast { "light" }
+    image_url { "url" }
+    association :creator, factory: :user
+  end
 end
