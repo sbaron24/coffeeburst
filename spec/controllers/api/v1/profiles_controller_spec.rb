@@ -2,17 +2,8 @@ require "rails_helper"
 
 RSpec.describe Api::V1::ProfilesController, type: :controller do
 
-  user = FactoryBot.create(:user)
-
-  let!(:coffee) { Coffee.create(
-    name: "Colombia San Lorenzo",
-    roaster: "Greenway Coffee Company",
-    country: "Colombia",
-    process: "Fully washed",
-    roast: "Medium light",
-    creator: user,
-    image_url: "https://www.mistobox.com/media/catalog/product/cache/0/image/450x450/9df78eab33525d08d6e5fb8d27136e95/g/o/good-folks-single-origin_1.png"
-  )}
+  let!(:user) { FactoryBot.create(:user) }
+  let!(:coffee) { FactoryBot.create(:coffee) }
 
   let!(:flavor) { Quality.create(
     name: 'cherry',
@@ -33,10 +24,10 @@ RSpec.describe Api::V1::ProfilesController, type: :controller do
   )}
 
   describe "POST#create" do
+    user = FactoryBot.create(:user)
     it "creates a new profile with profile attributes" do
-
       sign_in(user)
-      
+
       prev_profile_count = Profile.count
       prev_profile_quality_count = ProfileQuality.count
 

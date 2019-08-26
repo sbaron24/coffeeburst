@@ -13,6 +13,7 @@ FactoryBot.define do
     country { "Colombia" }
     process { "Fully washed" }
     roast { "light" }
-    image_url { "https://www.mistobox.com/media/catalog/product/cache/0/image/450x450/9df78eab33525d08d6e5fb8d27136e95/g/o/good-folks-single-origin_1.png" }
+    image_url { "url" }
+    association :creator, factory: :user
   end
 end

@@ -3,9 +3,8 @@ require "rails_helper"
 RSpec.describe Api::V1::CoffeesController, type: :controller do
 
   before(:all) do
-    user = FactoryBot.create(:user)
-    coffee = FactoryBot.create(:coffee, creator: user)
-    coffee2 = FactoryBot.create(:coffee, creator: user, roast: 'dark')
+    coffee = FactoryBot.create(:coffee)
+    coffee2 = FactoryBot.create(:coffee, roast: 'dark')
   end
 
   describe "POST#search for coffees from colombia" do
