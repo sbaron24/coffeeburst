@@ -4,6 +4,7 @@ class Coffee < ApplicationRecord
   validates :country, presence: true
   validates :process, presence: true
   validates :roast, presence: true
+  validates :image_url, presence: true
 
   has_many :profiles
   has_many :users, through: :profiles
