@@ -1,0 +1,23 @@
+<h1>Welcome, <%= @user.email %>!</h1>
+
+<h2>Your profiles</h2>
+<% if @user.profiles.empty? %>
+
+  <p>You haven't added any coffee profiles. They'll appear here once you do :)</p>
+  <a href='/'>Search for coffees</a>
+
+<% else %>
+
+  <% @user.profiles.each do |profile| %>
+    <div>
+      <img src= <%= profile.coffee.image_url %> width=150px height=150px />
+      <div class="coffee-details">
+        <h5><%= profile.coffee.name %></h5>
+        <h7><%= profile.coffee.roaster %> </h7>
+        <h8><%= profile.coffee.country %></h8>
+        <p><%= profile.coffee.process %></p>
+      </div>
+    </div>
+  <% end %>
+
+<% end %>

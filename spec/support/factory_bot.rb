@@ -16,4 +16,9 @@ FactoryBot.define do
     image_url { "url" }
     association :creator, factory: :user
   end
+
+  factory :profile do
+    association :user, factory: :user
+    association :coffee, factory: :coffee
+  end
 end
