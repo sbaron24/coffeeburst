@@ -1,9 +1,9 @@
 <h1>Welcome, <%= @user.email %>!</h1>
 
-<h2>Your profiles</h2>
+<h2>Your coffees</h2>
 <% if @user.profiles.empty? %>
 
-  <p>You haven't added any coffee profiles. They'll appear here once you do :)</p>
+  <p>You haven't added any coffee profiles. Your coffees will appear here once you do :)</p>
   <a href='/'>Search for coffees</a>
 
 <% else %>

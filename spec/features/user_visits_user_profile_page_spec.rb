@@ -8,7 +8,7 @@ feature 'user visits user profile page', %Q{
 
   scenario 'user is not signed in and does not see link for user profile page' do
     visit "/"
-    expect(page).to_not have_content('View Profiles')
+    expect(page).to_not have_content('Your Coffees')
   end
 
   scenario %Q{
@@ -17,8 +17,8 @@ feature 'user visits user profile page', %Q{
     and sees no profiles message and clicks link to return to homepage"}  do
     user = FactoryBot.create(:user)
     sign_in_as(user)
-    click_link 'View Profiles'
-    expect(page).to have_content("You haven't added any coffee profiles. They'll appear here once you do :)")
+    click_link 'Your Coffees'
+    expect(page).to have_content("You haven't added any coffee profiles. Your coffees will appear here once you do :)")
     click_link 'Search for coffees'
   end
 
@@ -30,7 +30,7 @@ feature 'user visits user profile page', %Q{
     coffee = FactoryBot.create(:coffee)
     profile = FactoryBot.create(:profile, user: user, coffee: coffee)
     sign_in_as(user)
-    click_link 'View Profiles'
+    click_link 'Your Coffees'
     expect(page).to have_content("#{coffee.name}")
   end
 end
