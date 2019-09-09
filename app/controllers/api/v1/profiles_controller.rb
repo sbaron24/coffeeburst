@@ -3,10 +3,13 @@ class Api::V1::ProfilesController < ApplicationController
 
   def create
     coffee = Coffee.find(params[:coffee_id])
-    profile = Profile.create(
-      coffee: coffee,
-      user: current_user
-    )
+    if current_user.profiles.where(coffee: coffee).empty?
+      profile = Profile.create(coffee: coffee, user: current_user)
+    else
+      profile = current_user.profiles.where(coffee: coffee)[0]
+      new_count = profile.count + 1
+      profile.update(count: new_count)
+    end
     params[:flavor_ids].each do |id|
       ProfileQuality.create!(profile: profile, quality_id: id)
     end
