@@ -7,9 +7,9 @@
     <p><%= @coffee.process %></p>
   </div>
 
-  <% if current_user.nil? && @profile.empty? %>
+  <% if current_user.nil? %>
   <%= link_to 'Sign in to add an attribute profile', new_coffee_profile_path(@coffee.id), :class => 'button' %>
-  <% elsif !current_user.nil? && @profile.empty? %>
+  <% elsif !current_user.nil? %>
   <%= link_to 'Add an attribute profile', new_coffee_profile_path(@coffee.id), :class => 'button' %>
   <% end %>
 </div>
