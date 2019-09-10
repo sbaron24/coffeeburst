@@ -12,6 +12,12 @@
     <div>
       <img src= <%= profile.coffee.image_url %> width=150px height=150px />
       <div class="coffee-details">
+        <% if profile.count == 1 %>
+          <% profile_string = 'profile' %>
+        <% else %>
+          <% profile_string = 'profiles' %>
+        <% end %>
+        <p><i> You've added <%= profile.count %> <%= "#{profile_string}" %> for this coffee </i></p>
         <h5><%= profile.coffee.name %></h5>
         <h7><%= profile.coffee.roaster %> </h7>
         <h8><%= profile.coffee.country %></h8>

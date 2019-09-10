@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_09_040722) do
+ActiveRecord::Schema.define(version: 2019_09_09_175704) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 2019_08_09_040722) do
     t.bigint "coffee_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "count", default: 1, null: false
     t.index ["coffee_id"], name: "index_profiles_on_coffee_id"
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end

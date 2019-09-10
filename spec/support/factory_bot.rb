@@ -20,5 +20,6 @@ FactoryBot.define do
   factory :profile do
     association :user, factory: :user
     association :coffee, factory: :coffee
+    count { 1 }
   end
 end
