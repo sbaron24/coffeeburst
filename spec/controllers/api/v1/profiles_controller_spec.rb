@@ -42,11 +42,11 @@ RSpec.describe Api::V1::ProfilesController, type: :controller do
           coffee_id: coffee.id,
           flavor_ids: [flavor.id],
           body_id: body.id,
-          description_id: description.id
+          description_id: description.id,
+          rating: 3
         })
 
         expect(Profile.count).to eq(1)
-        expect(Profile.first.count).to eq(1)
         expect(ProfileQuality.count).to eq(3)
         expect(Profile.last.qualities.last.name).to eq('dry & astringent')
 
@@ -57,7 +57,7 @@ RSpec.describe Api::V1::ProfilesController, type: :controller do
     end
 
     context "user adds two profiles for a coffee" do
-      it "creates increments the count of profiles for a coffee and adds new profile qualities" do
+      it "increments the count of profiles for a coffee and adds new profile qualities" do
         sign_in(user)
 
         prev_profile_count = 0
@@ -68,7 +68,8 @@ RSpec.describe Api::V1::ProfilesController, type: :controller do
           coffee_id: coffee.id,
           flavor_ids: [flavor.id],
           body_id: body.id,
-          description_id: description.id
+          description_id: description.id,
+          rating: 3
         })
 
         post(:create,
@@ -76,11 +77,11 @@ RSpec.describe Api::V1::ProfilesController, type: :controller do
           coffee_id: coffee.id,
           flavor_ids: [flavor.id],
           body_id: body.id,
-          description_id: description2.id
+          description_id: description2.id,
+          rating: 3
         })
 
         expect(Profile.count).to eq(1)
-        expect(Profile.first.count).to eq(2)
         expect(ProfileQuality.count).to eq(6)
         expect(Profile.last.qualities.last.name).to eq('magnificent')
 

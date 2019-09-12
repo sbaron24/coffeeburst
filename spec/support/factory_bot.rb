@@ -21,5 +21,13 @@ FactoryBot.define do
     association :user, factory: :user
     association :coffee, factory: :coffee
     count { 1 }
+    rating { 3 }
+  end
+
+  factory :quality do
+    id { 1 }
+    name { 'orange' }
+    color { '#FFD43A' }
+    quality_type { 'flavor' }
   end
 end
