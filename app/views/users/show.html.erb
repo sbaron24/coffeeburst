@@ -8,15 +8,15 @@
 
 <% else %>
 
-
-  <% @user.profiles.each do |profile| %>
-    <div>
+  <div class="show-main">
+    <% @user.profiles.each do |profile| %>
       <a href= <%= "/coffees/#{profile.coffee.id}" %>><img src= <%= profile.coffee.image_url %> width=150px height=150px /></a>
+      <h2> <%= profile.rating.round(1) %> </h2>
       <div class="coffee-details">
         <% if profile.count == 1 %>
-          <% profile_string = 'profile' %>
+        <% profile_string = 'profile' %>
         <% else %>
-          <% profile_string = 'profiles' %>
+        <% profile_string = 'profiles' %>
         <% end %>
         <p><i> You've added <%= profile.count %> <%= "#{profile_string}" %> for this coffee </i></p>
         <%= link_to 'Add an attribute profile', new_coffee_profile_path(profile.coffee.id), :class => 'button' %>
@@ -25,6 +25,6 @@
         <h8><%= profile.coffee.country %></h8>
         <p><%= profile.coffee.process %></p>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 <% end %>

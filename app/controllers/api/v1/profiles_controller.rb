@@ -3,18 +3,19 @@ class Api::V1::ProfilesController < ApplicationController
 
   def create
     coffee = Coffee.find(params[:coffee_id])
-    if current_user.profiles.where(coffee: coffee).empty?
-      profile = Profile.create(coffee: coffee, user: current_user)
+    profile = current_user.profiles.where(coffee: coffee)[0]
+    if profile.nil?
+      profile = Profile.create(coffee: coffee, user: current_user, rating: params['rating'])
     else
-      profile = current_user.profiles.where(coffee: coffee)[0]
-      new_count = profile.count + 1
-      profile.update(count: new_count)
+      Profile.adjust_profile_rating(profile, params[:rating])
+      Profile.increment_profile_count(profile)
     end
-    params[:flavor_ids].each do |id|
-      ProfileQuality.create!(profile: profile, quality_id: id)
-    end
-    ProfileQuality.create!(profile: profile, quality_id: params[:body_id])
-    ProfileQuality.create!(profile: profile, quality_id: params[:description_id])
+    ProfileQuality.create_profile_quality_associations(
+      profile,
+      params[:flavor_ids],
+      params[:body_id],
+      params[:description_id]
+    )
     render json: {message: "Profile saved for #{coffee.name}"}
   end
 end
